@@ -7,13 +7,15 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FeedComponent } from './feed/feed.component';
 import { FooterComponent } from './footer/footer.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { DestaquesComponent } from './destaques/destaques.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     FeedComponent,
-    FooterComponent
+    FooterComponent,
+    DestaquesComponent
   ],
   imports: [
     BrowserModule,

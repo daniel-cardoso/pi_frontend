@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { faFacebook, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+
+
 
 
 @Component({
@@ -7,6 +10,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./footer.component.css']
 })
 export class FooterComponent implements OnInit {
+
+  faFacebook = faFacebook
+  faInstagram = faInstagram
+  faLinkedin = faLinkedin
+
+  
 
   constructor() { }
 

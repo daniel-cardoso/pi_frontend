@@ -16,7 +16,7 @@ import { ContatoComponent } from './contato/contato.component';
     NavbarComponent,
     FeedComponent,
     FooterComponent,
-    DestaquesComponent
+    DestaquesComponent,
     ContatoComponent
   ],
   imports: [

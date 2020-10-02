@@ -93,8 +93,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css",
-
+              "src/styles.css"
             ],
             "scripts": []
           }
@@ -125,6 +124,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "pifront"
+    }
+  },
+  "defaultProject": "pifront",
+  "cli": {
+    "analytics": "a83af789-6ca7-4376-9570-b89f19151b51"
+  }
 }

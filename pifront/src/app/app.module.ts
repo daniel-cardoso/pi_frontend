@@ -10,6 +10,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { DestaquesComponent } from './destaques/destaques.component';
 import { ContatoComponent } from './contato/contato.component';
 import { HomeComponent } from './home/home.component';
+import { CadastroComponent } from './cadastro/cadastro.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { HomeComponent } from './home/home.component';
     FooterComponent,
     DestaquesComponent,
     ContatoComponent,
-    HomeComponent
+    HomeComponent,
+    CadastroComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

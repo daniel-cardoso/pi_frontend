@@ -7,10 +7,6 @@
         {
             "name": "feature/sidebar-teste",
             "base": "develop"
-        },
-        {
-            "name": "feature/post-tema",
-            "base": "develop"
         }
     ]
 }

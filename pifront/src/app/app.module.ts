@@ -14,6 +14,7 @@ import { ContatoComponent } from './contato/contato.component';
 import { HomeComponent } from './home/home.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { LoginComponent } from './login/login.component';
+import { CasaComponent } from './casa/casa.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { LoginComponent } from './login/login.component';
     ContatoComponent,
     HomeComponent,
     CadastroComponent,
-    LoginComponent
+    LoginComponent,
+    CasaComponent
   ],
   imports: [
     BrowserModule,

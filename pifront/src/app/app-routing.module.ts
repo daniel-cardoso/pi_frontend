@@ -5,6 +5,7 @@ import { DestaquesComponent } from './destaques/destaques.component';
 import { ContatoComponent } from './contato/contato.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { CasaComponent } from './casa/casa.component';
 
 
 const routes: Routes = [
@@ -14,6 +15,7 @@ const routes: Routes = [
   {path:'home', component: HomeComponent},
   {path:'login', component: LoginComponent},
   {path:'cadastro', component: CadastroComponent},
+  {path:'casa', component: CasaComponent},
 
 
 ];

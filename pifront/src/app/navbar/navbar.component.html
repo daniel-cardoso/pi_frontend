@@ -1,7 +1,10 @@
-<div class="container">
 <nav class="navbar navbar-expand-lg navbar-light background">
-  <a class="navbar-brand" href="#">LOGO ícone</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Alterna navegação">
+  <a class="navbar-brand" href="#">
+    <i class="fas fa-microphone    "></i>
+
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Alterna navegação">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
@@ -13,17 +16,38 @@
         <a class="nav-link" routerLink="/destaques">Destaques</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Feed</a>
+        <a class="nav-link" routerLink="/feed">Feed</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="">Sobre nós</a>
+        <a class="nav-link" routerLink="/sobre-nos">Sobre nós</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" routerLink="/contato">Contato</a>
       </li>
+      
+     <div *ngIf="auth.btnLogin()">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/cadastro">Cadastro</a>
+      </li>
+     </div>
+      
+      <div *ngIf="auth.btnLogin()">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/login">Login</a>
+        </li>
+        
+      </div>
+
+      <div *ngIf="auth.btnSair()">
+        <li class="nav-item">
+          <a class="nav-link" (click)="sair()">Sair</a>
+        </li>
+      </div>
+
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Meu Perfil
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          Meu Perfil
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           <a class="dropdown-item" href="#">Meus Dados</a>
@@ -34,4 +58,3 @@
     </ul>
   </div>
 </nav>
-</div>

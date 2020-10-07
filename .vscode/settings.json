@@ -3,6 +3,14 @@
         {
             "name": "feature/page-destaques",
             "base": "develop"
+        },
+        {
+            "name": "feature/sidebar-teste",
+            "base": "develop"
+        },
+        {
+            "name": "feature/post-tema",
+            "base": "develop"
         }
     ]
 }

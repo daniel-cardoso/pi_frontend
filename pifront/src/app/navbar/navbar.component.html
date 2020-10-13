@@ -24,18 +24,18 @@
       <li class="nav-item">
         <a class="nav-link" routerLink="/contato">Contato</a>
       </li>
-      
+
      <div *ngIf="auth.btnLogin()">
       <li class="nav-item">
         <a class="nav-link" routerLink="/cadastro">Cadastro</a>
       </li>
      </div>
-      
+
       <div *ngIf="auth.btnLogin()">
         <li class="nav-item">
           <a class="nav-link" routerLink="/login">Login</a>
         </li>
-        
+
       </div>
 
       <div *ngIf="auth.btnSair()">

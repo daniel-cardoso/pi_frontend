@@ -7,7 +7,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FeedComponent } from './feed/feed.component';
 import { FooterComponent } from './footer/footer.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { LoginCadComponent } from './login-cad/login-cad.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +15,7 @@ import { LoginCadComponent } from './login-cad/login-cad.component';
     NavbarComponent,
     FeedComponent,
     FooterComponent,
-    LoginCadComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,

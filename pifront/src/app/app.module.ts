@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { OrderModule } from 'ngx-order-pipe';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { HashLocationStrategy, LocationStrategy} from '@angular/common';
+import { NgxMaskModule} from 'ngx-mask';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -55,8 +56,9 @@ import { CasaComponent } from './casa/casa.component';
     HttpClientModule,
     FormsModule,
     OrderModule,
-    ModalModule.forRoot()
-    
+    ModalModule.forRoot(),
+    NgxMaskModule.forRoot()
+
   ],
   providers: [{
     provide: LocationStrategy,

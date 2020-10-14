@@ -8,6 +8,10 @@ import { Routes, RouterModule } from '@angular/router';
 import { PostTemaComponent } from './post-tema/post-tema.component';
 import { FeedComponent } from './feed/feed.component';
 import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
+import { PutPostagemComponent } from './put-postagem/put-postagem.component';
+import { DeletePostagemComponent } from './delete-postagem/delete-postagem.component';
+import { DeleteTemaComponent } from './delete-tema/delete-tema.component';
+import { PutTemaComponent } from './put-tema/put-tema.component';
 
 
 const routes: Routes = [
@@ -21,7 +25,11 @@ const routes: Routes = [
   {path:'cadastro', component: CadastroComponent},
   {path:'cadastro-tema', component: PostTemaComponent},
   {path:'feed', component: FeedComponent},
-  {path:'sobre-nos', component: SobreNosComponent}
+  {path:'sobre-nos', component: SobreNosComponent},
+  {path:'editar-post/:id', component: PutPostagemComponent},
+  {path:'delete-post/:id', component: DeletePostagemComponent},
+  {path:'editar-tema/:id', component: PutTemaComponent},
+  {path:'delete-tema/:id', component: DeleteTemaComponent}
 
 
 

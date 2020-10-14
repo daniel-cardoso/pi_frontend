@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import {HttpClient, HttpClientModule} from '@angular/common/http'
 import { FormsModule } from '@angular/forms';
 import { OrderModule } from 'ngx-order-pipe';
+import { ModalModule } from 'ngx-bootstrap/modal';
+import { HashLocationStrategy, LocationStrategy} from '@angular/common';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,6 +20,11 @@ import { LoginComponent } from './login/login.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { PostTemaComponent } from './post-tema/post-tema.component';
 import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
+import { PutPostagemComponent } from './put-postagem/put-postagem.component';
+import { AlertasComponent } from './alertas/alertas.component';
+import { DeletePostagemComponent } from './delete-postagem/delete-postagem.component';
+import { PutTemaComponent } from './put-tema/put-tema.component';
+import { DeleteTemaComponent } from './delete-tema/delete-tema.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +39,12 @@ import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
     LoginComponent,
     SidebarComponent,
     PostTemaComponent,
-    SobreNosComponent
+    SobreNosComponent,
+    PutPostagemComponent,
+    AlertasComponent,
+    DeletePostagemComponent,
+    PutTemaComponent,
+    DeleteTemaComponent
   ],
   imports: [
     BrowserModule,
@@ -40,10 +52,14 @@ import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
     FontAwesomeModule,
     HttpClientModule,
     FormsModule,
-    OrderModule
+    OrderModule,
+    ModalModule.forRoot()
     
   ],
-  providers: [],
+  providers: [{
+    provide: LocationStrategy,
+    useClass: HashLocationStrategy
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

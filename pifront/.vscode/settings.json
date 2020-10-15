@@ -3,6 +3,10 @@
         {
             "name": "feature/contato",
             "base": "develop"
+        },
+        {
+            "name": "feature/semana12",
+            "base": "develop"
         }
     ]
 }

@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from 'src/environments/environment.prod';
 import { UserLogin } from '../model/UserLogin';
 import { Usuario } from '../model/Usuario';
 
@@ -20,9 +21,9 @@ export class AuthService {
 
   btnSair(){
     let ok = false
-    let token = localStorage.getItem('token')
+    let token = environment.token
 
-    if (token != null) {
+    if (token != '') {
       ok = true
     }
 
@@ -31,12 +32,22 @@ export class AuthService {
 
   btnLogin() {
     let ok = false
-    let token = localStorage.getItem('token')
+    let token = environment.token
 
-    if (token == null) {
+    if (token == '') {
       ok = true
     }
 
     return ok
   }
+
+  getByIdUsuario(id: number) {
+    return this.http.get(`http://localhost:8080/usuario/titulo/${id}`, this.token)
+  }
+
+  /*@GetMapping("/{id}")
+	public ResponseEntity<Usuario> GetById(@PathVariable long id) {
+		return repository.findById(id).map(resp -> ResponseEntity.ok(resp)).orElse(ResponseEntity.notFound().build());
+	}*/ 
+
 }

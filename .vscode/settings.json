@@ -3,6 +3,10 @@
         {
             "name": "feature/page-destaques",
             "base": "develop"
+        },
+        {
+            "name": "feature/sidebar-teste",
+            "base": "develop"
         }
     ]
 }

@@ -4,5 +4,6 @@ export class UserLogin {
     public usuarioEmail:string
     public usuarioSenha:string
     public usuarioToken:string
+    public usuarioImagemUrl:string
     
 }

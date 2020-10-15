@@ -10,8 +10,8 @@
 }
 
 .card-signin {
-  border: 1;
-  border-radius: 0rem;
+  border: 1; /*alterar aqui para deixar filete branco envolvendo a img*/
+  border-radius: 1rem;
   box-shadow: 0 0.8rem 1rem 0 rgba(0, 0, 0, 0.1)
 }
 
@@ -19,6 +19,11 @@
   margin-bottom: 2rem;
   font-weight: 300;
   font-size: 1.5rem
+}
+
+.imagem-card {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
 }
 
 .card-signin .card-body {
@@ -68,14 +73,4 @@
 
 .form-control:focus {
   box-shadow: 10px 0px 0px 0px #ffffff !important
-}
-
-.btn-google {
-  color: white;
-  background-color: #ea4335
-}
-
-.btn-facebook {
-  color: white;
-  background-color: #3b5998
 }

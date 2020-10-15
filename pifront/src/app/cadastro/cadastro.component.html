@@ -2,8 +2,8 @@
   <div class="row">
       <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
 
-          <div class="card card-signin my-5 rounded-top">
-            <img src="https://i.imgur.com/P8jB7xW.jpg" class="w-100 mb-0" alt="">
+          <div class="card card-signin my-5">
+            <img src="https://i.imgur.com/P8jB7xW.jpg" class="w-100 mb-0 imagem-card" alt="">
               <div class="card-body">
 
                   <h5 class="card-title text-center font-weight-bold">Cadastro</h5>
@@ -20,6 +20,20 @@
                         </div>
                       </div>
                     </div>
+
+                    <!-- tentativa de fazer a imagem do avatar -->
+                    <div class="row">
+                      <div class="col-sm-1 pt-2">
+                        <fa-icon [icon]='faUser' class="fa-1x"></fa-icon>
+                      </div>
+                      <div class="col-md-10">
+                        <div class="form-label-group">
+                          <input type="text" id="imgurl" class="form-control p-2"
+                          placeholder="Url de sua foto" required autofocus [(ngModel)]='usuario.usuarioImagemUrl'>
+                        </div>
+                      </div>
+                    </div>
+                    <!--/fim tentativa de fazer a imagem do avatar -->
 
                     <div class="row">
                       <div class="col-sm-1 pt-2">

@@ -41,4 +41,13 @@ export class AuthService {
     return ok
   }
 
+  getByIdUsuario(id: number) {
+    return this.http.get(`http://localhost:8080/usuario/titulo/${id}`, this.token)
+  }
+
+  /*@GetMapping("/{id}")
+	public ResponseEntity<Usuario> GetById(@PathVariable long id) {
+		return repository.findById(id).map(resp -> ResponseEntity.ok(resp)).orElse(ResponseEntity.notFound().build());
+	}*/ 
+
 }

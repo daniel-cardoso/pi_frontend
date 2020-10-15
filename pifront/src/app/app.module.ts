@@ -27,6 +27,7 @@ import { DeletePostagemComponent } from './delete-postagem/delete-postagem.compo
 import { PutTemaComponent } from './put-tema/put-tema.component';
 import { DeleteTemaComponent } from './delete-tema/delete-tema.component';
 import { CasaComponent } from './casa/casa.component';
+import { PerfilComponent } from './perfil/perfil.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { CasaComponent } from './casa/casa.component';
     DeletePostagemComponent,
     PutTemaComponent,
     DeleteTemaComponent,
-    CasaComponent
+    CasaComponent,
+    PerfilComponent
   ],
   imports: [
     BrowserModule,

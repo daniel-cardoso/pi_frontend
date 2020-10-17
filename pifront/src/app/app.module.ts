@@ -13,7 +13,6 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FeedComponent } from './feed/feed.component';
 import { FooterComponent } from './footer/footer.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { DestaquesComponent } from './destaques/destaques.component';
 import { ContatoComponent } from './contato/contato.component';
 import { HomeComponent } from './home/home.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
@@ -35,7 +34,6 @@ import { PerfilComponent } from './perfil/perfil.component';
     NavbarComponent,
     FeedComponent,
     FooterComponent,
-    DestaquesComponent,
     ContatoComponent,
     HomeComponent,
     CadastroComponent,

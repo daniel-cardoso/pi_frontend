@@ -28,6 +28,8 @@ import { PutTemaComponent } from './put-tema/put-tema.component';
 import { DeleteTemaComponent } from './delete-tema/delete-tema.component';
 import { CasaComponent } from './casa/casa.component';
 import { PerfilComponent } from './perfil/perfil.component';
+import { MissaoVisaoValoresComponent } from './missao-visao-valores/missao-visao-valores.component';
+import { IntegrantesComponent } from './integrantes/integrantes.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +51,9 @@ import { PerfilComponent } from './perfil/perfil.component';
     PutTemaComponent,
     DeleteTemaComponent,
     CasaComponent,
-    PerfilComponent
+    PerfilComponent,
+    MissaoVisaoValoresComponent,
+    IntegrantesComponent
   ],
   imports: [
     BrowserModule,

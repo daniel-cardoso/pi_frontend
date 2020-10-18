@@ -29,6 +29,8 @@ import { CasaComponent } from './casa/casa.component';
 import { PerfilComponent } from './perfil/perfil.component';
 import { MissaoVisaoValoresComponent } from './missao-visao-valores/missao-visao-valores.component';
 import { IntegrantesComponent } from './integrantes/integrantes.component';
+import { PerfilLateralComponent } from './perfil-lateral/perfil-lateral.component';
+import { MeusDadosComponent } from './meus-dados/meus-dados.component';
 
 @NgModule({
   declarations: [
@@ -52,6 +54,8 @@ import { IntegrantesComponent } from './integrantes/integrantes.component';
     PerfilComponent,
     MissaoVisaoValoresComponent,
     IntegrantesComponent,
+    PerfilLateralComponent,
+    MeusDadosComponent,
   ],
   imports: [
     BrowserModule,

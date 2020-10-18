@@ -14,7 +14,6 @@ import { DeleteTemaComponent } from './delete-tema/delete-tema.component';
 import { PutTemaComponent } from './put-tema/put-tema.component';
 import { CasaComponent } from './casa/casa.component';
 import { PerfilComponent } from './perfil/perfil.component';
-import { PostagemGeralComponent } from './postagem-geral/postagem-geral.component';
 
 
 const routes: Routes = [
@@ -35,7 +34,6 @@ const routes: Routes = [
   {path:'delete-tema/:id', component: DeleteTemaComponent},
   {path:'casa', component: CasaComponent},
   {path:'perfil', component: PerfilComponent},
-  {path:'postagens', component: PostagemGeralComponent},
 
 
 ];

@@ -18,7 +18,6 @@ import { ContatoComponent } from './contato/contato.component';
 import { HomeComponent } from './home/home.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { LoginComponent } from './login/login.component';
-import { SidebarComponent } from './sidebar/sidebar.component';
 import { PostTemaComponent } from './post-tema/post-tema.component';
 import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
 import { PutPostagemComponent } from './put-postagem/put-postagem.component';
@@ -30,7 +29,6 @@ import { CasaComponent } from './casa/casa.component';
 import { PerfilComponent } from './perfil/perfil.component';
 import { MissaoVisaoValoresComponent } from './missao-visao-valores/missao-visao-valores.component';
 import { IntegrantesComponent } from './integrantes/integrantes.component';
-import { PostagemGeralComponent } from './postagem-geral/postagem-geral.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +41,6 @@ import { PostagemGeralComponent } from './postagem-geral/postagem-geral.componen
     HomeComponent,
     CadastroComponent,
     LoginComponent,
-    SidebarComponent,
     PostTemaComponent,
     SobreNosComponent,
     PutPostagemComponent,
@@ -55,7 +52,6 @@ import { PostagemGeralComponent } from './postagem-geral/postagem-geral.componen
     PerfilComponent,
     MissaoVisaoValoresComponent,
     IntegrantesComponent,
-    PostagemGeralComponent
   ],
   imports: [
     BrowserModule,

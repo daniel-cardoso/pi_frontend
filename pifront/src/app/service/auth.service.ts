@@ -45,8 +45,6 @@ export class AuthService {
     return ok
   }
 
-<<<<<<< HEAD
-=======
   getByIdUsuario(id: number) {
     return this.http.get(`http://localhost:8080/usuario/${id}`, this.token)
   }
@@ -59,5 +57,4 @@ export class AuthService {
 
   
 
->>>>>>> 656672af90c61b8a166009f2a739cb12fcbab3ad
 }

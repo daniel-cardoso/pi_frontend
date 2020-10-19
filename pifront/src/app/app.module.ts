@@ -36,6 +36,8 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { DialogFeedPageComponent } from './views/feed-page/dialog-feed-page/dialog-feed-page.component';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatInputModule} from '@angular/material/input';
+import { MenuLateralComponent } from './views/menu-lateral/menu-lateral.component';
+import { DropdComponent } from './views/menu-lateral/dropd/dropd.component';
 
 
 @NgModule({
@@ -63,6 +65,8 @@ import { MatInputModule} from '@angular/material/input';
     FloatBtnComponent,
     DropdownTemasComponent,
     DialogFeedPageComponent,
+    MenuLateralComponent,
+    DropdComponent,
     
   ],
   imports: [

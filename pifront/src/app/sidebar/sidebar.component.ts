@@ -22,10 +22,10 @@ export class SidebarComponent implements OnInit {
       (this.tmp = Object.keys(themeMap)[0],
           localStorage.setItem('theme', this.tmp),
           this.tmp);
-  const bodyClass = document.body.classList;
+  const bodyClass = document.getElementById("teste").classList
   bodyClass.add(theme);
 
-  function toggleTheme() {
+    function toggleTheme() {
       const current = localStorage.getItem('theme');
       const next = themeMap[current];
 

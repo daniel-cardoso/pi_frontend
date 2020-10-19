@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { environment } from 'src/environments/environment.prod';
 import { Postagem } from '../model/Postagem';
 import { Tema } from '../model/Tema';
 import { PostagemService } from '../service/postagem.service';
@@ -21,6 +22,7 @@ export class FeedComponent implements OnInit {
   tema: Tema = new Tema();
   listaTemas: Tema[];
   idTema: number;
+  nomeTema:string;
 
   constructor(
     private postagemService: PostagemService,
@@ -28,6 +30,9 @@ export class FeedComponent implements OnInit {
   ) {}
 
   ngOnInit() {
+
+    let token = environment.token
+    
     window.scroll(0, 0);
 
     this.findAllPostagens();
@@ -72,5 +77,25 @@ export class FeedComponent implements OnInit {
     this.temaService.getByIdTema(this.idTema).subscribe((resp: Tema) => {
       this.tema = resp;
     });
+  }
+
+  findByTituloPostagem() {
+    if (this.titulo === ''){
+      this.findAllPostagens()
+    } else {
+      this.postagemService.getByTituloPostagem(this.titulo).subscribe((resp: Postagem[]) => {
+        this.listaPostagens = resp
+      })
+    }
+  }
+
+  findByNomeTema() {
+    if (this.nomeTema === ''){
+      this.findAllTemas()
+    } else {
+      this.temaService.getByNomeTema(this.nomeTema).subscribe((resp: Tema[]) => {
+        this.listaTemas = resp
+      })
+    }
   }
 }

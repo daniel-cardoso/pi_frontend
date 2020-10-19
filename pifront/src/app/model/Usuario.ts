@@ -7,6 +7,7 @@ export class Usuario {
     public usuarioSenha:string
     public usuarioNascimento: string
     public usuarioDocumento: string
+    public usuarioImagemUrl: string
     public postagem: Postagem[]
     
 }

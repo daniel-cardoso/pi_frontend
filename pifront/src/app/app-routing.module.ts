@@ -15,7 +15,8 @@ import { PutTemaComponent } from './put-tema/put-tema.component';
 import { CasaComponent } from './casa/casa.component';
 import { PerfilComponent } from './perfil/perfil.component';
 import { FeedPageComponent } from './views/feed-page/feed-page.component';
-
+import { PerfilLateralComponent } from './perfil-lateral/perfil-lateral.component';
+import { MeusDadosComponent } from './meus-dados/meus-dados.component';
 
 const routes: Routes = [
   
@@ -36,7 +37,8 @@ const routes: Routes = [
   {path:'casa', component: CasaComponent},
   {path:'perfil', component: PerfilComponent},
   {path:'feed-page', component: FeedPageComponent},
-
+  {path:'meuperfil', component: PerfilLateralComponent},
+  {path:'meusdados', component: MeusDadosComponent},
 
 ];
 

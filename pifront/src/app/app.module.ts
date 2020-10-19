@@ -18,7 +18,6 @@ import { ContatoComponent } from './contato/contato.component';
 import { HomeComponent } from './home/home.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { LoginComponent } from './login/login.component';
-import { SidebarComponent } from './sidebar/sidebar.component';
 import { PostTemaComponent } from './post-tema/post-tema.component';
 import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
 import { PutPostagemComponent } from './put-postagem/put-postagem.component';
@@ -37,7 +36,10 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { DialogFeedPageComponent } from './views/feed-page/dialog-feed-page/dialog-feed-page.component';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatInputModule} from '@angular/material/input';
-
+import { MissaoVisaoValoresComponent } from './missao-visao-valores/missao-visao-valores.component';
+import { IntegrantesComponent } from './integrantes/integrantes.component';
+import { PerfilLateralComponent } from './perfil-lateral/perfil-lateral.component';
+import { MeusDadosComponent } from './meus-dados/meus-dados.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +52,6 @@ import { MatInputModule} from '@angular/material/input';
     HomeComponent,
     CadastroComponent,
     LoginComponent,
-    SidebarComponent,
     PostTemaComponent,
     SobreNosComponent,
     PutPostagemComponent,
@@ -65,7 +66,10 @@ import { MatInputModule} from '@angular/material/input';
     FloatBtnComponent,
     DropdownTemasComponent,
     DialogFeedPageComponent,
-    
+    MissaoVisaoValoresComponent,
+    IntegrantesComponent,
+    PerfilLateralComponent,
+    MeusDadosComponent,
   ],
   imports: [
     BrowserModule,

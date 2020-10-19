@@ -1,62 +1,93 @@
 <h1 mat-dialog-title>Agora é só preencher. 😀</h1>
 <div mat-dialog-content class="dialog">
-  <form class="example-form" [formGroup]="formulario">
+  <div class="example-form">
     <mat-form-field class="w-100" appearance="outline">
       <mat-label>Título</mat-label>
-      <input matInput formControlName="postTitulo" name="postTitulo">
+      <input matInput [(ngModel)]='postagem.postTitulo'>
     </mat-form-field>
-  </form>
-  <form class="example-form" [formGroup]="formulario">
+  </div>
+
+
+  <div class="example-form">
     <mat-form-field class="w-100" appearance="outline">
       <mat-label>Texto</mat-label>
-      <textarea matInput formControlName="postTexto" name="postTexto"></textarea>
+      <textarea matInput [(ngModel)]='postagem.postTexto'></textarea>
     </mat-form-field>
-  </form>
-  <form class="example-form" [formGroup]="formulario">
+  </div>
+
+  <div class="example-form">
     <mat-form-field class="w-100" appearance="outline">
       <mat-label>Tema</mat-label>
-      <input matInput formControlName="postTema" name="postTema">
+      <!--<a routerLink='/cadastro-tema'>Cadastre um novo</a>-->
+      <mat-select [(ngModel)]="postagem.tema" required id='tema' (change)='findByIdTema()'>
+        <mat-option *ngFor="let item of listaTemas" [value]="item.temaDescricao">
+          {{item.temaDescricao}}
+        </mat-option>
+
+        <!-- <mat-option>teste 1</mat-option>
+        <mat-option>teste 2</mat-option>
+        <mat-option>teste 3</mat-option> -->
+      </mat-select>
+      <!-- <mat-error *ngIf="tema.hasError('required')">Por favor, escolha um tema</mat-error> -->
     </mat-form-field>
-  </form>
-  <form class="example-form" [formGroup]="formulario">
+    <a routerLink='/cadastro-tema'>
+      <small style="float: inline-end;">Cadastre um novo tema</small>
+    </a>
+
+  </div>
+
+
+  <div class="example-form">
     <mat-form-field class="w-100" appearance="outline">
       <mat-label>Estado</mat-label>
-      <input matInput formControlName="postEstado" name="postEstado">
+      <mat-select [(ngModel)]="postagem.postEstado" required>
+        <mat-option *ngFor="let item of listaUF" [value]="item">
+          {{item}}
+        </mat-option>
+      </mat-select>
     </mat-form-field>
-  </form>
-  <form class="example-form" [formGroup]="formulario">
+  </div>
+
+  <div class="example-form">
     <mat-form-field class="w-100" appearance="outline">
       <mat-label>Cidade</mat-label>
-      <input matInput formControlName="postCidade" name="postCidade">
+      <input matInput required [(ngModel)]='postagem.postCidade'>
     </mat-form-field>
-  </form>
-  <form class="example-form" [formGroup]="formulario">
+  </div>
+
+  <div class="example-form">
     <mat-form-field class="w-100" appearance="outline">
       <mat-label>Endereço</mat-label>
-      <input matInput formControlName="postEndereco" name="postEndereco">
+      <input matInput [(ngModel)]='postagem.postEndereco'>
     </mat-form-field>
-  </form>
-  <form class="example-form" [formGroup]="formulario">
+  </div>
+
+
+  <div class="example-form">
     <mat-form-field class="w-100" appearance="outline">
       <mat-label>Tag</mat-label>
-      <input matInput formControlName="postTag" name="postTag">
+      <input matInput [(ngModel)]='postagem.postTag'>
     </mat-form-field>
-  </form>
-  <form class="example-form" [formGroup]="formulario">
+  </div>
+
+
+  <div class="example-form">
     <mat-form-field class="w-100" appearance="outline">
       <mat-label>Site</mat-label>
-      <input matInput formControlName="postUrl" name="postUrl">
+      <input matInput [(ngModel)]='postagem.postUrl'>
     </mat-form-field>
-  </form>
-  <form class="example-form" [formGroup]="formulario">
+  </div>
+
+
+  <div class="example-form">
     <mat-form-field class="w-100" appearance="outline">
       <mat-label>Url de Imagem</mat-label>
-      <input matInput formControlName="postImagem" name="postImagem">
+      <input matInput [(ngModel)]='postagem.postImagem'>
     </mat-form-field>
-  </form>
+  </div>
 </div>
 
-  <div mat-dialog-actions>
-   <button  mat-raised-button class="bg-success" (click)="publicar()">OK</button>
-    <button mat-button (click)="cancelar()">No Thanks</button>
-  </div>
+<div mat-dialog-actions>
+  <button mat-raised-button class="bg-success" (click)="publicar()">Publicar!</button>
+  <button mat-raised-button (click)="cancelar()">Cancelar</button>
+</div>

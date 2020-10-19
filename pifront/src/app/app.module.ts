@@ -35,6 +35,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatDialogModule} from '@angular/material/dialog';
 import { DialogFeedPageComponent } from './views/feed-page/dialog-feed-page/dialog-feed-page.component';
 import { MatNativeDateModule } from '@angular/material/core';
+import {MatSelectModule} from '@angular/material/select';
 import { MatInputModule} from '@angular/material/input';
 import { MissaoVisaoValoresComponent } from './missao-visao-valores/missao-visao-valores.component';
 import { IntegrantesComponent } from './integrantes/integrantes.component';
@@ -84,7 +85,8 @@ import { MeusDadosComponent } from './meus-dados/meus-dados.component';
     MatDialogModule,
     MatInputModule,
     MatNativeDateModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatSelectModule,
 
   ],
   providers: [{

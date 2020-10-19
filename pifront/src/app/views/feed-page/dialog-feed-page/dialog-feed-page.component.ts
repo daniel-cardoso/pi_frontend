@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialogRef } from '@angular/material/dialog';
 import { PostagemService } from 'src/app/service/postagem.service';
-import { UsuarioService } from 'src/app/service/usuario.service';
 
 @Component({
   selector: 'app-dialog-feed-page',

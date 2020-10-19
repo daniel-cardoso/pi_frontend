@@ -5,24 +5,25 @@ import { DialogFeedPageComponent } from './dialog-feed-page/dialog-feed-page.com
 @Component({
   selector: 'app-feed-page',
   templateUrl: './feed-page.component.html',
-  styleUrls: ['./feed-page.component.css']
+  styleUrls: ['./feed-page.component.css'],
 })
 export class FeedPageComponent implements OnInit {
+  
 
-  constructor(public dialog: MatDialog) { }
+  constructor(public dialog: MatDialog) {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   abrirDialog(): void {
-    const dialogRef = this.dialog.open(DialogFeedPageComponent, {
-      minWidth: '450px'}
-      // ,data: {name: this.name, animal: this.animal}}
+    const dialogRef = this.dialog.open(
+      DialogFeedPageComponent,
+      {
+        minWidth: '450px',
+      }
     );
 
-    dialogRef.afterClosed().subscribe(result => {
+    dialogRef.afterClosed().subscribe((result) => {
       console.log('The dialog was closed');
-      // this.animal = result;
     });
   }
 }

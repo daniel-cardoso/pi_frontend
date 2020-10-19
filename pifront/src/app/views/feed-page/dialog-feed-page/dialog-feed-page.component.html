@@ -1,0 +1,62 @@
+<h1 mat-dialog-title>Agora é só preencher. 😀</h1>
+<div mat-dialog-content class="dialog">
+  <form class="example-form" [formGroup]="formulario">
+    <mat-form-field class="w-100" appearance="outline">
+      <mat-label>Título</mat-label>
+      <input matInput formControlName="postTitulo" name="postTitulo">
+    </mat-form-field>
+  </form>
+  <form class="example-form" [formGroup]="formulario">
+    <mat-form-field class="w-100" appearance="outline">
+      <mat-label>Texto</mat-label>
+      <input matInput formControlName="postTexto" name="postTexto">
+    </mat-form-field>
+  </form>
+  <form class="example-form" [formGroup]="formulario">
+    <mat-form-field class="w-100" appearance="outline">
+      <mat-label>Tema</mat-label>
+      <input matInput formControlName="postTema" name="postTema">
+    </mat-form-field>
+  </form>
+  <form class="example-form" [formGroup]="formulario">
+    <mat-form-field class="w-100" appearance="outline">
+      <mat-label>Estado</mat-label>
+      <input matInput formControlName="postEstado" name="postEstado">
+    </mat-form-field>
+  </form>
+  <form class="example-form" [formGroup]="formulario">
+    <mat-form-field class="w-100" appearance="outline">
+      <mat-label>Cidade</mat-label>
+      <input matInput formControlName="postCidade" name="postCidade">
+    </mat-form-field>
+  </form>
+  <form class="example-form" [formGroup]="formulario">
+    <mat-form-field class="w-100" appearance="outline">
+      <mat-label>Endereço</mat-label>
+      <input matInput formControlName="postEndereco" name="postEndereco">
+    </mat-form-field>
+  </form>
+  <form class="example-form" [formGroup]="formulario">
+    <mat-form-field class="w-100" appearance="outline">
+      <mat-label>Tag</mat-label>
+      <input matInput formControlName="postTag" name="postTag">
+    </mat-form-field>
+  </form>
+  <form class="example-form" [formGroup]="formulario">
+    <mat-form-field class="w-100" appearance="outline">
+      <mat-label>Site</mat-label>
+      <input matInput formControlName="postUrl" name="postUrl">
+    </mat-form-field>
+  </form>
+  <form class="example-form" [formGroup]="formulario">
+    <mat-form-field class="w-100" appearance="outline">
+      <mat-label>Url de Imagem</mat-label>
+      <input matInput formControlName="postImagem" name="postImagem">
+    </mat-form-field>
+  </form>
+</div>
+
+  <div mat-dialog-actions>
+   <button  mat-raised-button class="bg-success" (click)="publicar()">OK</button>
+    <button mat-button (click)="cancelar()">No Thanks</button>
+  </div>

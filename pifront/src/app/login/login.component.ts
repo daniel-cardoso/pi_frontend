@@ -22,10 +22,14 @@ export class LoginComponent implements OnInit {
   }
 
   entrar() {
+    
     this.authService.logar(this.userLogin).subscribe((resp: UserLogin) => {
       this.userLogin = resp
+      environment.idUser = resp.usuarioId
       environment.token = this.userLogin.usuarioToken
+      console.log(environment)
       this.router.navigate(['/home'])
+      
     })
   }
 

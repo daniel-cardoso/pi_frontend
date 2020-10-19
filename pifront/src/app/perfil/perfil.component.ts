@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { UserLogin } from '../model/UserLogin';
 import { Usuario } from '../model/Usuario';
 import { AuthService } from '../service/auth.service';
+import { UsuarioService } from '../service/usuario.service';
 
 @Component({
   selector: 'app-perfil',
@@ -11,33 +12,42 @@ import { AuthService } from '../service/auth.service';
   styleUrls: ['./perfil.component.css'],
 })
 export class PerfilComponent implements OnInit {
-  usuarioteste: Usuario = new Usuario();
-  userLogin: UserLogin = new UserLogin();
+  
+  usuario: Usuario = new Usuario();
+  
+  idUser: number;
+  nomeUser: string;
+  fotoUrlUser: string;
+  
 
   constructor(
     private authService: AuthService,
-    private router: Router
+    private usuarioService: UsuarioService,
+    private router: Router,
+    private route: ActivatedRoute
     ) {}
 
   ngOnInit() {
+    window.scroll(0, 0)
 
-
-
-    // console.log(
-    //   this.usuarioteste.usuarioImagemUrl +
-    //     ' = this.usuarioteste.usuarioImagemUrl'
-    // );
-    // console.log(
-    //   this.userLogin.usuarioImagemUrl +
-    //     ' = this.userloginteste.usuarioImagemUrl'
-    // );
+    let token = environment.token
+    
+    this.idUser = environment.idUser;
+    this.nomeUser = environment.nomeUser;
+    
+    this.pegaUsuarioPeloId();
+    
   }
 
-  teste() {
-    this.authService.logar(this.userLogin).subscribe((resp: UserLogin) => {
-      this.userLogin = resp;
-      environment.token = this.userLogin.usuarioToken;
-      console.log(this.userLogin.usuarioImagemUrl + " = this.userLogin.usuarioImagemUrl ")
-    });
+  
+
+  pegaUsuarioPeloId(){
+    this.usuarioService.getByIdUsuario(this.idUser).subscribe((resp:any) => {
+      this.usuario = resp;
+      this.fotoUrlUser = this.usuario.usuarioImagemUrl;
+      console.log(this.usuario);
+    })
   }
+
+  
 }

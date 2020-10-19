@@ -1,4 +1,8 @@
 export const environment = {
   production: true,
-  token: ''
+  idUser: 0,
+  nomeUser: '',
+  fotoUrlUser: '',
+  token: '',
+  admin: false
 };

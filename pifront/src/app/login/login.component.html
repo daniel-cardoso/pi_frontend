@@ -15,15 +15,17 @@
                         </div>
                         <div class="form-group">
                             <label for="exampleInputPassword1">Senha</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Sua senha" required [(ngModel)]='userLogin.usuarioSenha'>
-                            <div id="emailHelp" class="" routerLink='/Esqueci_a_senha'>Esqueci a minha senha</div>
-                        </div>
-                        <div class="custom-control custom-checkbox mb-3">
-                            <input type="checkbox" class="custom-control-input" id="customCheck1">
-                            <label class="custom-control-label" for="customCheck1">Lembrar da senha?</label>
-                        </div>
-                        <button class="btn btn-lg colorl btn-block text-uppercase rounded" type="submit" (click)='entrar()'>Entrar</button>
-                        <hr class="my-3">
+                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha" required [(ngModel)]='userLogin.usuarioSenha'>
+                            <a href="/Esqueciasenha">Esqueci a minha senha</a>
+                          </div>
+                        <div class="custom-control custom-checkbox mb-3"> 
+                            <input type="checkbox" class="custom-control-input" id="customCheck1"> 
+                            <label class="custom-control-label" for="customCheck1">Lembrar da senha?</label> 
+                        </div> 
+                        <button class="btn btn-lg colorl btn-block text-uppercase" type="submit" (click)='entrar()'>Entrar</button>
+                        <hr class="my-4">
+                    </div>
+                    <div class="card-body">
                         <span>Não possui conta?</span>
                         <button class="btn btn-lg btn-dark btn-block text-uppercase rounded" routerLink='/cadastro'>Cadastre-se</button>
                     </div>

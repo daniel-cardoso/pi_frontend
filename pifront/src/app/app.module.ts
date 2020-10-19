@@ -13,7 +13,6 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FeedComponent } from './feed/feed.component';
 import { FooterComponent } from './footer/footer.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { DestaquesComponent } from './destaques/destaques.component';
 import { ContatoComponent } from './contato/contato.component';
 import { HomeComponent } from './home/home.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
@@ -41,6 +40,9 @@ import { MissaoVisaoValoresComponent } from './missao-visao-valores/missao-visao
 import { IntegrantesComponent } from './integrantes/integrantes.component';
 import { PerfilLateralComponent } from './perfil-lateral/perfil-lateral.component';
 import { MeusDadosComponent } from './meus-dados/meus-dados.component';
+import { MenuLateralComponent } from './views/menu-lateral/menu-lateral.component';
+import { DropdComponent } from './views/menu-lateral/dropd/dropd.component';
+
 
 @NgModule({
   declarations: [
@@ -48,7 +50,6 @@ import { MeusDadosComponent } from './meus-dados/meus-dados.component';
     NavbarComponent,
     FeedComponent,
     FooterComponent,
-    DestaquesComponent,
     ContatoComponent,
     HomeComponent,
     CadastroComponent,
@@ -71,6 +72,9 @@ import { MeusDadosComponent } from './meus-dados/meus-dados.component';
     IntegrantesComponent,
     PerfilLateralComponent,
     MeusDadosComponent,
+    MenuLateralComponent,
+    DropdComponent,
+    
   ],
   imports: [
     BrowserModule,

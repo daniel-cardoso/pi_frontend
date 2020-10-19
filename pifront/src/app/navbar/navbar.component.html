@@ -25,30 +25,33 @@
             </li>
         </ul>
 
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-                <a class="nav-link" routerLink="/cadastro" href="#">Cadastrar</a>
-            </li>
-            <li class="nav-item ml-3">
-                <a class="nav-link" routerLink="/login" href="#">Entrar</a>
-            </li>
-        </ul>
-        <ul class="navbar-nav ml-auto nav-flex-icons navbar-right">
+        <div *ngIf="auth.btnLogin()">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/cadastro" href="#">Cadastrar</a>
+                </li>
+                <li class="nav-item ml-3">
+                    <a class="nav-link" routerLink="/login" href="#">Entrar</a>
+                </li>
+            </ul>
+        </div>
 
-            <li class="nav-item avatar dropdown">
-                <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-55" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
-                    <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-2.jpg" height="35px"
-                        class="rounded-circle z-depth-0" alt="avatar image">
-                </a>
-                <div class="dropdown-menu dropdown-menu-lg-right background-black"
-                    aria-labelledby="navbarDropdownMenuLink-55">
-                    <a class="dropdown-item text-secondary" routerLink="/meusdados" href="#">Meus dados</a>
-                    <a class="dropdown-item text-secondary" routerLink="/meuperfil" href="#">Minhas postagens</a>
-                    <a class="dropdown-item text-secondary" href="#">Sair</a>
-                </div>
-            </li>
-        </ul>
+        <div *ngIf="auth.btnSair()">
+            <ul class="navbar-nav ml-auto nav-flex-icons navbar-right">
+                <li class="nav-item avatar dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-55" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-2.jpg" height="35px" class="rounded-circle z-depth-0" alt="avatar image">
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-lg-right background-black" aria-labelledby="navbarDropdownMenuLink-55">
+                        <a class="dropdown-item text-secondary" routerLink="/meusdados" href="#">Meus dados</a>
+                        <a class="dropdown-item text-secondary" routerLink="/meuperfil" href="#">Minhas postagens</a>
+                        <a class="dropdown-item text-secondary" href="#">Sair</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+
     </div>
 </nav>
 <!--/.Navbar -->

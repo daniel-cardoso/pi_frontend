@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {HttpClient, HttpClientModule} from '@angular/common/http'
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { OrderModule } from 'ngx-order-pipe';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { HashLocationStrategy, LocationStrategy} from '@angular/common';
@@ -27,6 +27,16 @@ import { PutTemaComponent } from './put-tema/put-tema.component';
 import { DeleteTemaComponent } from './delete-tema/delete-tema.component';
 import { CasaComponent } from './casa/casa.component';
 import { PerfilComponent } from './perfil/perfil.component';
+import { HomePageComponent } from './views/home-page/home-page.component';
+import { FeedPageComponent } from './views/feed-page/feed-page.component';
+import { FloatBtnComponent } from './componentes/float-btn/float-btn.component';
+import { DropdownTemasComponent } from './componentes/dropdown-temas/dropdown-temas.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatDialogModule} from '@angular/material/dialog';
+import { DialogFeedPageComponent } from './views/feed-page/dialog-feed-page/dialog-feed-page.component';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatInputModule} from '@angular/material/input';
+
 
 @NgModule({
   declarations: [
@@ -47,7 +57,13 @@ import { PerfilComponent } from './perfil/perfil.component';
     PutTemaComponent,
     DeleteTemaComponent,
     CasaComponent,
-    PerfilComponent
+    PerfilComponent,
+    HomePageComponent,
+    FeedPageComponent,
+    FloatBtnComponent,
+    DropdownTemasComponent,
+    DialogFeedPageComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -57,7 +73,12 @@ import { PerfilComponent } from './perfil/perfil.component';
     FormsModule,
     OrderModule,
     ModalModule.forRoot(),
-    NgxMaskModule.forRoot()
+    NgxMaskModule.forRoot(),
+    BrowserAnimationsModule,
+    MatDialogModule,
+    MatInputModule,
+    MatNativeDateModule,
+    ReactiveFormsModule
 
   ],
   providers: [{

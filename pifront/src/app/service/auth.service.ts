@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment.prod';
 import { UserLogin } from '../model/UserLogin';
@@ -10,6 +10,10 @@ import { Usuario } from '../model/Usuario';
 export class AuthService {
 
   constructor(private http: HttpClient) { }
+
+  token = {
+    headers: new HttpHeaders().set('Authorization', environment.token)
+  }
 
   logar(userLogin: UserLogin){
     return this.http.post('http://localhost:8080/usuario/logar', userLogin)
@@ -41,4 +45,19 @@ export class AuthService {
     return ok
   }
 
+<<<<<<< HEAD
+=======
+  getByIdUsuario(id: number) {
+    return this.http.get(`http://localhost:8080/usuario/${id}`, this.token)
+  }
+
+  getAllUsuario(){
+    return this.http.get(`http://localhost:8080/usuario`, this.token)
+  }
+  //
+   
+
+  
+
+>>>>>>> 656672af90c61b8a166009f2a739cb12fcbab3ad
 }

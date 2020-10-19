@@ -13,6 +13,7 @@ import { DeleteTemaComponent } from './delete-tema/delete-tema.component';
 import { PutTemaComponent } from './put-tema/put-tema.component';
 import { CasaComponent } from './casa/casa.component';
 import { PerfilComponent } from './perfil/perfil.component';
+import { FeedPageComponent } from './views/feed-page/feed-page.component';
 
 
 const routes: Routes = [
@@ -32,6 +33,7 @@ const routes: Routes = [
   {path:'delete-tema/:id', component: DeleteTemaComponent},
   {path:'casa', component: CasaComponent},
   {path:'perfil', component: PerfilComponent},
+  {path:'feed-page', component: FeedPageComponent},
 
 
 ];

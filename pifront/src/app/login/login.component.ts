@@ -26,6 +26,8 @@ export class LoginComponent implements OnInit {
     this.authService.logar(this.userLogin).subscribe((resp: UserLogin) => {
       this.userLogin = resp
       environment.idUsuario = resp.usuarioId
+      environment.nomeUsuario = resp.usuarioNome
+      environment.fotoUrlUsuario = resp.usuarioImagemUrl
       environment.token = this.userLogin.usuarioToken
       console.log(environment)
       this.router.navigate(['/home'])

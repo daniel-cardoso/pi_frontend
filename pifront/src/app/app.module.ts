@@ -1,3 +1,4 @@
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {HttpClient, HttpClientModule} from '@angular/common/http'
@@ -43,6 +44,9 @@ import { MeusDadosComponent } from './meus-dados/meus-dados.component';
 import { MenuLateralComponent } from './views/menu-lateral/menu-lateral.component';
 import { DropdComponent } from './views/menu-lateral/dropd/dropd.component';
 import { NgxViacepModule } from '@brunoc/ngx-viacep';
+import { FeedUsuarioComponent } from './feed-usuario/feed-usuario.component';
+import {MatCardModule} from '@angular/material/card';
+
 
 
 @NgModule({
@@ -75,6 +79,7 @@ import { NgxViacepModule } from '@brunoc/ngx-viacep';
     MeusDadosComponent,
     MenuLateralComponent,
     DropdComponent,
+    FeedUsuarioComponent
     
     
   ],
@@ -93,7 +98,8 @@ import { NgxViacepModule } from '@brunoc/ngx-viacep';
     MatNativeDateModule,
     ReactiveFormsModule,
     MatSelectModule,
-    NgxViacepModule
+    NgxViacepModule,
+    MatCardModule
 
   ],
   providers: [{

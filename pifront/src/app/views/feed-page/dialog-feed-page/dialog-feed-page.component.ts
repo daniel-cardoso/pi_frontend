@@ -37,16 +37,7 @@ export class DialogFeedPageComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    // this.formulario = this.fb.group({
-    //   //validators.required = not null (obrigatório)
-    //   postTitulo: ['', [Validators.required]],
-    //   postTexto: ['', [Validators.required]],
-    //   postEstado: ['', [Validators.required]],
-    //   postCidade: ['', [Validators.required]],
-    //   postEndereco: ['', [Validators.required]],
-    //   postUrl: ['', [Validators.required]],
-    //   postImagem: ['', [Validators.required]],
-    // });
+   
 
     this.findAllPostagens();
     this.findAllTemas();
@@ -78,6 +69,8 @@ export class DialogFeedPageComponent implements OnInit {
           this.postagem = new Postagem();
           alert('Postagem realizada com sucesso!');
           this.findAllPostagens();
+          this.dialogRef.close();
+          
         });
     }
   }

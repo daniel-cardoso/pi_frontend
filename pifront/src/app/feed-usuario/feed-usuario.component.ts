@@ -6,7 +6,7 @@ import { Usuario } from '../model/Usuario';
 import { AlertasService } from '../service/alertas.service';
 import { PostagemService } from '../service/postagem.service';
 import { TemaService } from '../service/tema.service';
-import { NgxViacepService, Endereco, ErroCep, ErrorValues } from '@brunoc/ngx-viacep';
+import { NgxViacepService, Endereco } from '@brunoc/ngx-viacep';
 
 
 @Component({

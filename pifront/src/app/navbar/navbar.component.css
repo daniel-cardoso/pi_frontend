@@ -1,8 +1,11 @@
-.background {
-  background-color: rgb(235, 156, 10)
+.background-orange {
+    background-color: rgb(235, 156, 10);
 }
 
 a {
-  cursor: pointer;
+    cursor: pointer;
 }
 
+.background-black {
+    background-color: black;
+}

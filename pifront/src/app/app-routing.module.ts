@@ -16,6 +16,7 @@ import { PerfilComponent } from './perfil/perfil.component';
 import { FeedPageComponent } from './views/feed-page/feed-page.component';
 import { PerfilLateralComponent } from './perfil-lateral/perfil-lateral.component';
 import { MeusDadosComponent } from './meus-dados/meus-dados.component';
+import { FeedUsuarioComponent } from './feed-usuario/feed-usuario.component';
 
 const routes: Routes = [
   
@@ -37,6 +38,8 @@ const routes: Routes = [
   {path:'feed-page', component: FeedPageComponent},
   {path:'meuperfil', component: PerfilLateralComponent},
   {path:'meusdados', component: MeusDadosComponent},
+  {path:'mypost', component: FeedUsuarioComponent},
+
 
 ];
 

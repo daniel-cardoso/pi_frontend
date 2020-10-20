@@ -42,6 +42,7 @@ import { PerfilLateralComponent } from './perfil-lateral/perfil-lateral.componen
 import { MeusDadosComponent } from './meus-dados/meus-dados.component';
 import { MenuLateralComponent } from './views/menu-lateral/menu-lateral.component';
 import { DropdComponent } from './views/menu-lateral/dropd/dropd.component';
+import { NgxViacepModule } from '@brunoc/ngx-viacep';
 
 
 @NgModule({
@@ -75,6 +76,7 @@ import { DropdComponent } from './views/menu-lateral/dropd/dropd.component';
     MenuLateralComponent,
     DropdComponent,
     
+    
   ],
   imports: [
     BrowserModule,
@@ -91,6 +93,7 @@ import { DropdComponent } from './views/menu-lateral/dropd/dropd.component';
     MatNativeDateModule,
     ReactiveFormsModule,
     MatSelectModule,
+    NgxViacepModule
 
   ],
   providers: [{

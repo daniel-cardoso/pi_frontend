@@ -32,8 +32,8 @@ export class PerfilComponent implements OnInit {
 
     let token = environment.token
     
-    this.idUser = environment.idUser;
-    this.nomeUser = environment.nomeUser;
+    this.idUser = environment.idUsuario;
+    this.nomeUser = environment.nomeUsuario;
     
     this.pegaUsuarioPeloId();
     

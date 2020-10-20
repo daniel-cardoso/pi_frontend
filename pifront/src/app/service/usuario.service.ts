@@ -21,7 +21,7 @@ export class UsuarioService {
     return this.http.get(this.API + `/${id}`, this.token)
   }
 
-  getAllUsuario(){
+  getAllUsuarios(){
     return this.http.get(this.API, this.token)
   }
 }

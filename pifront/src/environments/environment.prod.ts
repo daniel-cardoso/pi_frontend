@@ -3,6 +3,8 @@ export const environment = {
   idUsuario: 0,
   nomeUsuario: '',
   fotoUrlUsuario: '',
+  emailUsuario: '',
+  cpfUsuario: '',
   token: '',
   admin: false
 };

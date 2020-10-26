@@ -55,7 +55,3 @@ html {
     display: inline-block;
     position: relative;
 }
-
-.btn-editpost {
-    justify-content: flex-end;
-}

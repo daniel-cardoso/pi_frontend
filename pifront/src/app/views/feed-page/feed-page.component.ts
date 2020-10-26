@@ -50,7 +50,6 @@ export class FeedPageComponent implements OnInit {
 
     this.postagem.usuario = this.usuario;
     this.usuario.id = environment.idUsuario;
-    this.manipularPost();
     this.findUserById();
     this.findAllPostagens();
     this.findAllTemas();

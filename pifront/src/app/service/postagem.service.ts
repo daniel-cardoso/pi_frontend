@@ -43,9 +43,6 @@ export class PostagemService {
     return this.http.get(this.API + `/titulo/${titulo}`, this.token)
   }
 
-
-
   
-
-
+  
 }

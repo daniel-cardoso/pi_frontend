@@ -9,7 +9,7 @@ export class MeusDadosComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
 
 }

@@ -9,7 +9,7 @@ export class IntegrantesComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
 
 }

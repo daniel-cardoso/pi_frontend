@@ -1,3 +1,5 @@
+import { TemaService } from 'src/app/service/tema.service';
+import { PostagemService } from 'src/app/service/postagem.service';
 import { environment } from 'src/environments/environment.prod';
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
@@ -35,19 +37,29 @@ export class FeedPageComponent implements OnInit {
 
   constructor(
     public dialog: MatDialog,
-    private authService: AuthService,
-    private usuarioService: UsuarioService,
+    private temaService: TemaService,
+    public postagemService: PostagemService,
+    public usuarioService: UsuarioService,
     private router: Router,
     private route: ActivatedRoute
   ) {}
 
-  ngOnInit(): void {
-    let token = environment.token;
+  ngOnInit() {
     this.idUser = environment.idUsuario;
     this.nomeUser = environment.nomeUsuario;
     this.fotoUrlUser = environment.fotoUrlUsuario;
 
+    this.postagem.usuario = this.usuario;
+    this.usuario.id = environment.idUsuario;
+
+    
+
     this.findUserById();
+    this.findAllPostagens();
+    this.findAllTemas();
+    // this.findByIdListaPostagem();
+
+    console.log(this.listaPostagens);
   }
 
   abrirDialog(): void {
@@ -57,15 +69,57 @@ export class FeedPageComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe((result) => {
       console.log('The dialog was closed');
+      this.findAllPostagens();
     });
   }
 
   findUserById() {
     this.usuarioService.getByIdUsuario(this.idUser).subscribe((resp: any) => {
       this.usuario = resp;
-      this.idUser = this.usuario.id;
-      this.nomeUser = this.usuario.usuarioNome;
-      this.fotoUrlUser = this.usuario.usuarioImagemUrl;
     });
+  }
+
+  findAllTemas() {
+    this.temaService.getAllTemas().subscribe((resp: Tema[]) => {
+      this.listaTemas = resp;
+    });
+  }
+
+  findByIdTema() {
+    this.temaService.getByIdTema(this.idTema).subscribe((resp: Tema) => {
+      this.tema = resp;
+    });
+  }
+
+  findAllPostagens() {
+    this.postagemService.getAllPostagens().subscribe((resp: Postagem[]) => {
+      this.listaPostagens = resp;
+    });
+  }
+
+  findByTituloPostagem() {
+    if (this.titulo === ''){
+      this.findAllPostagens()
+    } else {
+      this.postagemService.getByTituloPostagem(this.titulo).subscribe((resp: Postagem[]) => {
+        this.listaPostagens = resp
+      })
+    }
+  }
+
+  findByIdListaPostagem() {
+    this.postagemService.getByIdListaPostagem(this.idUser).subscribe((resp: Postagem[]) => {
+      this.listaPostagens = resp
+    })
+  }
+
+  findByNomeTema() {
+    if (this.nomeTema === ''){
+      this.findAllTemas()
+    } else {
+      this.temaService.getByNomeTema(this.nomeTema).subscribe((resp: Tema[]) => {
+        this.listaTemas = resp
+      })
+    }
   }
 }

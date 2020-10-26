@@ -9,7 +9,7 @@ export class DropdownTemasComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
 
 }

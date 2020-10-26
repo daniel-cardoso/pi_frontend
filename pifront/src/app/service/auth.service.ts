@@ -5,56 +5,52 @@ import { UserLogin } from '../model/UserLogin';
 import { Usuario } from '../model/Usuario';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class AuthService {
-
-  constructor(private http: HttpClient) { }
+  private readonly API = 'http://localhost:8080/usuario'
+  constructor(private http: HttpClient) {}
 
   token = {
-    headers: new HttpHeaders().set('Authorization', environment.token)
+    headers: new HttpHeaders().set('Authorization', environment.token),
+  };
+
+  logar(userLogin: UserLogin) {
+    return this.http.post(this.API + '/logar', userLogin);
   }
 
-  logar(userLogin: UserLogin){
-    return this.http.post('http://localhost:8080/usuario/logar', userLogin)
-  }
-
-  cadastrar(usuario: Usuario){
-    return this.http.post('http://localhost:8080/usuario/cadastrar', usuario)
-  }
-
-  btnSair(){
-    let ok = false
-    let token = environment.token
-
-    if (token != '') {
-      ok = true
-    }
-
-    return ok
-  }
-
-  btnLogin() {
-    let ok = false
-    let token = environment.token
-
-    if (token == '') {
-      ok = true
-    }
-
-    return ok
+  cadastrar(usuario: Usuario) {
+    return this.http.post(this.API + '/cadastrar', usuario);
   }
 
   getByIdUsuario(id: number) {
-    return this.http.get(`http://localhost:8080/usuario/${id}`, this.token)
+    return this.http.get(this.API + `/${id}`, this.token);
   }
 
-  getAllUsuario(){
-    return this.http.get(`http://localhost:8080/usuario`, this.token)
+  getAllUsuario() {
+    return this.http.get(this.API, this.token);
   }
-  //
-   
 
-  
+  btnSair() {
+    let ok = false;
+    let token = environment.token;
+
+    if (token != '') {
+      ok = true;
+    }
+
+    return ok;
+  }
+
+  btnLogin() {
+    let ok = false;
+    let token = environment.token;
+
+    if (token == '') {
+      ok = true;
+    }
+
+    return ok;
+  }
 
 }

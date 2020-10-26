@@ -1,3 +1,4 @@
+import { NovoFeedComponent } from './views/novo-feed/novo-feed.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
@@ -18,12 +19,12 @@ import { PerfilLateralComponent } from './perfil-lateral/perfil-lateral.componen
 import { MeusDadosComponent } from './meus-dados/meus-dados.component';
 import { FeedUsuarioComponent } from './feed-usuario/feed-usuario.component';
 
+
 const routes: Routes = [
   
   {path: '', redirectTo: 'home', pathMatch: 'full' },
   {path: 'home', component: HomeComponent},
   {path:'contato', component: ContatoComponent},
-  {path:'home', component: HomeComponent},
   {path:'login', component: LoginComponent},
   {path:'cadastro', component: CadastroComponent},
   {path:'cadastro-tema', component: PostTemaComponent},
@@ -39,6 +40,8 @@ const routes: Routes = [
   {path:'meuperfil', component: PerfilLateralComponent},
   {path:'meusdados', component: MeusDadosComponent},
   {path:'mypost', component: FeedUsuarioComponent},
+  {path:'novofeed', component: NovoFeedComponent},
+
 
 
 ];

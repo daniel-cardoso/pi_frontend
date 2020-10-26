@@ -27,7 +27,6 @@ import { PutTemaComponent } from './put-tema/put-tema.component';
 import { DeleteTemaComponent } from './delete-tema/delete-tema.component';
 import { CasaComponent } from './casa/casa.component';
 import { PerfilComponent } from './perfil/perfil.component';
-import { HomePageComponent } from './views/home-page/home-page.component';
 import { FeedPageComponent } from './views/feed-page/feed-page.component';
 import { FloatBtnComponent } from './componentes/float-btn/float-btn.component';
 import { DropdownTemasComponent } from './componentes/dropdown-temas/dropdown-temas.component';
@@ -46,6 +45,7 @@ import { DropdComponent } from './views/menu-lateral/dropd/dropd.component';
 import { NgxViacepModule } from '@brunoc/ngx-viacep';
 import { FeedUsuarioComponent } from './feed-usuario/feed-usuario.component';
 import {MatCardModule} from '@angular/material/card';
+import { NovoFeedComponent } from './views/novo-feed/novo-feed.component';
 
 
 
@@ -68,7 +68,6 @@ import {MatCardModule} from '@angular/material/card';
     DeleteTemaComponent,
     CasaComponent,
     PerfilComponent,
-    HomePageComponent,
     FeedPageComponent,
     FloatBtnComponent,
     DropdownTemasComponent,
@@ -79,7 +78,8 @@ import {MatCardModule} from '@angular/material/card';
     MeusDadosComponent,
     MenuLateralComponent,
     DropdComponent,
-    FeedUsuarioComponent
+    FeedUsuarioComponent,
+    NovoFeedComponent
     
     
   ],

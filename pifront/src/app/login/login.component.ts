@@ -12,13 +12,13 @@ import { AuthService } from '../service/auth.service';
 export class LoginComponent implements OnInit {
 
   userLogin: UserLogin = new UserLogin()
-
+  
   constructor(
     private authService: AuthService,
     private router: Router
   ) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
 
   entrar() {
@@ -34,5 +34,11 @@ export class LoginComponent implements OnInit {
       
     })
   }
+
+ onKeypress(event: any){
+  if(event.keyCode === 13){
+    this.entrar();
+  }
+ }
 
 }

@@ -21,22 +21,22 @@ export class NavbarComponent implements OnInit {
   constructor(
     public auth: AuthService,
     private usuarioService: UsuarioService,
-    private router: Router,
-    private route: ActivatedRoute
+    private router: Router
   ) { }
 
-  ngOnInit(): void {
-    let token = environment.token
+  ngOnInit() {
 
-    this.idUser = environment.idUsuario;
-    this.nomeUser = environment.nomeUsuario;
-    this.fotoUrlUser = environment.fotoUrlUsuario;
+    
 
+    // this.idUser = environment.idUsuario;
+    // this.nomeUser = environment.nomeUsuario;
+    // this.fotoUrlUser = environment.fotoUrlUsuario;
+    console.log(this.usuario);
     this.findUserById();
   }
 
   sair() {
-    this.router.navigate(['/login'])
+    this.router.navigate(['/home'])
     environment.token = ''
   }
 

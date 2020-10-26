@@ -1,3 +1,4 @@
+import { Usuario } from './../model/Usuario';
 import { Component, OnInit } from '@angular/core';
 import { environment } from 'src/environments/environment.prod';
 import { Postagem } from '../model/Postagem';
@@ -14,6 +15,9 @@ export class FeedComponent implements OnInit {
 
   key = 'data';
   reverse = true;
+
+  usuario: Usuario = new Usuario();
+  
 
   postagem: Postagem = new Postagem();
   listaPostagens: Postagem[];
@@ -48,6 +52,9 @@ export class FeedComponent implements OnInit {
   publicar() {
     this.tema.id = this.idTema;
     this.postagem.tema = this.tema;
+    this.usuario.id = environment.idUsuario;
+    this.postagem.usuario = this.usuario;
+    
 
     if (
       this.postagem.postTitulo == null ||

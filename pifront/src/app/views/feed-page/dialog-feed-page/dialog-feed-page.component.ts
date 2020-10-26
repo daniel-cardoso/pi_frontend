@@ -1,10 +1,12 @@
+import { UsuarioService } from './../../../service/usuario.service';
+import { environment } from 'src/environments/environment.prod';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialogRef } from '@angular/material/dialog';
 import { Postagem } from 'src/app/model/Postagem';
 import { Tema } from 'src/app/model/Tema';
 import { PostagemService } from 'src/app/service/postagem.service';
 import { TemaService } from 'src/app/service/tema.service';
+import { Usuario } from 'src/app/model/Usuario';
 
 @Component({
   selector: 'app-dialog-feed-page',
@@ -12,48 +14,68 @@ import { TemaService } from 'src/app/service/tema.service';
   styleUrls: ['./dialog-feed-page.component.css'],
 })
 export class DialogFeedPageComponent implements OnInit {
-  // public formulario: FormGroup;
-  
-    listaUF=[
-      'AC','AL','AP','AM','BA','CE','DF','ES','GO','MA','MT','MS','MG','PA','PB','PR','PE','PI','RJ','RN','RS','RO','RR','SC','SP','SE','TO'
+  listaUF = [
+    'AC',
+    'AL',
+    'AP',
+    'AM',
+    'BA',
+    'CE',
+    'DF',
+    'ES',
+    'GO',
+    'MA',
+    'MT',
+    'MS',
+    'MG',
+    'PA',
+    'PB',
+    'PR',
+    'PE',
+    'PI',
+    'RJ',
+    'RN',
+    'RS',
+    'RO',
+    'RR',
+    'SC',
+    'SP',
+    'SE',
+    'TO',
   ];
-    listaCidades={'dsa':'dsadsa'};
-   
+
+  usuario_dialog: Usuario = new Usuario();
+  idUser: number;
+  nomeUser: string;
+
   postagem: Postagem = new Postagem();
   listaPostagens: Postagem[];
-  titulo: string;
 
   tema: Tema = new Tema();
   listaTemas: Tema[];
   idTema: number;
-  nomeTema:string;
-  
+  nomeTema: string;
 
   constructor(
-    private postagemService: PostagemService,
+    public usuarioService: UsuarioService,
+    public postagemService: PostagemService,
     private temaService: TemaService,
-    // private fb: FormBuilder,
     public dialogRef: MatDialogRef<DialogFeedPageComponent>
   ) {}
 
-  ngOnInit(): void {
-   
-
+  ngOnInit() {
+    this.idUser = environment.idUsuario;
+    this.findUserById();
     this.findAllPostagens();
     this.findAllTemas();
+    console.log(this.usuario_dialog)
   }
-
-  // publicarPost() {
-  //   this.postagemService
-  //     .postPostagem(this.formulario.value)
-  //     .subscribe((result) => {});
-  //   this.dialogRef.close();
-  //   this.formulario.reset();
-  // }
 
   publicar() {
     this.tema.id = this.idTema;
     this.postagem.tema = this.tema;
+    this.postagem.usuario = this.usuario_dialog;
+    this.usuario_dialog.id = environment.idUsuario;
 
     if (
       this.postagem.postTitulo == null ||
@@ -68,9 +90,7 @@ export class DialogFeedPageComponent implements OnInit {
           this.postagem = resp;
           this.postagem = new Postagem();
           alert('Postagem realizada com sucesso!');
-          this.findAllPostagens();
           this.dialogRef.close();
-          
         });
     }
   }
@@ -95,9 +115,14 @@ export class DialogFeedPageComponent implements OnInit {
 
   cancelar(): void {
     this.dialogRef.close();
-    
+
     // this.formulario.reset();
   }
 
+  findUserById() {
+    this.usuarioService.getByIdUsuario(this.idUser).subscribe((resp: any) => {
+      this.usuario_dialog = resp;
+    });
+  }
 
 }

@@ -16,7 +16,7 @@
                             <!-- conteúdo painel lateral esquerdo -->
                             <div>
                                 <h4 style="margin: 5px;">
-                                    Barra Lateral
+                                    Temas
 
                                 </h4>
                             </div>
@@ -41,7 +41,7 @@
                                 <div class=" container row w-100 justify-content-center" style="margin:15px;">
                                     <div class="col-md-4">
                                         <div class="row justify-content-center">
-                                            <img class="avatar" src={{fotoUrlUser}} alt="foto de perfil">
+                                            <img class="avatar" src="{{ fotoUrlUser }}" alt="foto de perfil">
                                         </div>
                                         <div class="row justify-content-center">
                                             <a style="text-decoration: none;" routerLink="/meusdados">{{ nomeUser }}</a>
@@ -64,23 +64,28 @@
                             <div class="lista-feed container row cinza2">
 
                                 <!-- COLUNA LISTAGEM FEED -->
-                                <!-- <div class="container bg-danger border border-danger">
-                                    <div class="card bg-info mt-5 mb-5" *ngFor='let item of listaPostagens | orderBy : key : reverse'>
-                                        a
+                                <div class="container cinza2">
+                                    <div class="card cinza3 mt-5 mb-5" *ngFor='let item of listaPostagens | orderBy : key : reverse'>
                                         <div class="card-header">
                                             <div class="row d-flex align-items-center">
                                                 <div class="col-md-8">
-                                                    <h5 class="card-title"> {{item.postTitulo}} </h5>
-                                                    <small>Tema: {{item.tema.temaDescricao}} </small>
+
+                                                    <h5 class="card-title text-info"> {{item.postTitulo}} </h5>
+                                                    <small class="text-info">Tema: {{item.tema.temaDescricao}} </small>
+                                                    <small>Autor: 
+                                                        <a routerLink="/meusdados">
+                                                            {{ item.usuario.usuarioNome }}
+                                                        </a>
+                                                    </small>
                                                 </div>
                                                 <div class="col-md-4 d-flex justify-content-end">
 
                                                     <button class="mr-3 btn btn-outline-info" [routerLink]="['/editar-post', item.id]">
-                                                        Editar
+                                                        <fa-icon class="fas fa-edit"></fa-icon>
                                                     </button>
 
                                                     <button class="btn btn-outline-danger ml-3" [routerLink]="['/delete-post', item.id]">
-                                                        Apagar
+                                                        <fa-icon class='fas fa-trash-alt'></fa-icon>
                                                     </button>
 
                                                 </div>
@@ -88,36 +93,15 @@
                                         </div>
 
                                         <div class="card-body">
-                                            <p class="card-text" aria-describedby="texto"> {{item.postTexto}}
+                                            <p class="card-text text-info" aria-describedby="texto"> {{item.postTexto}}
                                             </p>
-                                            <small id="texto" class="form-text m-0 text-muted mb-3">
+                                            <small id="texto" class="form-text m-0 text-muted text-info mb-3">
                                                 Postado em {{item.data | date: 'dd/MM/yyyy'}} às
                                                 {{item.data | date:'HH:mm'}}</small>
                                         </div>
                                     </div>
-                                </div> -->
-                                <div class="container row">
-                                    <div class="container col-lg-12 d-flex justify-content-center">
-                                    </div>
-                                    <mat-card class=" example-card w-100">
-                                        <mat-card-header>
-                                            <div mat-card-avatar class="example-header-image"></div>
-                                            <mat-card-title>Labrador Albino</mat-card-title>
-                                            <mat-card-subtitle>"Causa animal"</mat-card-subtitle>
-                                        </mat-card-header>
-                                        <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-                                        <mat-card-content>
-                                            <p>
-                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis sequi magni voluptas fugit maiores repellendus praesentium, similique eos mollitia dolores eligendi perspiciatis temporibus eius impedit assumenda veritatis excepturi asperiores recusandae.
-                                            </p>
-                                        </mat-card-content>
-                                        <mat-card-actions>
-                                            <button mat-button>PARTICIPAR</button>
-                                            <button mat-button>COMPARTILHAR</button>
-                                        </mat-card-actions>
-                                    </mat-card>
-
                                 </div>
+
 
 
 

@@ -7,6 +7,7 @@ import { environment } from 'src/environments/environment.prod';
 })
 export class UsuarioService {
   private readonly API = 'http://localhost:8080/usuario'
+  
   constructor(private http: HttpClient) { }
 
   token = {

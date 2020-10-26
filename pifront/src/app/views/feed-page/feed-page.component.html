@@ -82,7 +82,7 @@
                                         <div class="card-body">
                                             <p class="card-text text-info" aria-describedby="texto"> {{item.postTexto}}
                                             </p>
-                                            <a class="justify-content-center" href="">Ver o Post completo</a>
+                                            <a class="justify-content-center" (click)='verPostCompleto()'>Ver o Post completo</a>
                                             <small id="texto" class="form-text m-0 text-muted text-info mb-3">
                                                 Postado em {{item.data | date: 'dd/MM/yyyy'}} às
                                                 {{item.data | date:'HH:mm'}}</small>

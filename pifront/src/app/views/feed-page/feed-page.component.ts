@@ -10,6 +10,7 @@ import { UsuarioService } from 'src/app/service/usuario.service';
 import { Usuario } from 'src/app/model/Usuario';
 import { Postagem } from 'src/app/model/Postagem';
 import { Tema } from 'src/app/model/Tema';
+import { DialogPostcompletoComponent } from './dialog-listagem-feed/dialog-postcompleto/dialog-postcompleto.component';
 
 @Component({
   selector: 'app-feed-page',
@@ -36,6 +37,7 @@ export class FeedPageComponent implements OnInit {
 
   constructor(
     public dialog: MatDialog,
+    public verPost: MatDialog,
     private temaService: TemaService,
     public postagemService: PostagemService,
     public usuarioService: UsuarioService,
@@ -53,7 +55,6 @@ export class FeedPageComponent implements OnInit {
     this.findUserById();
     this.findAllPostagens();
     this.findAllTemas();
-
   }
 
   abrirDialog(): void {
@@ -62,9 +63,17 @@ export class FeedPageComponent implements OnInit {
     });
 
     dialogRef.afterClosed().subscribe((result) => {
-      console.log('The dialog was closed');
+      console.log('Dialog de publicar foi fechado');
       this.findAllPostagens();
     });
+  }
+
+  verPostCompleto(): void {
+    const dialogRef = this.verPost.open(DialogPostcompletoComponent);
+
+    dialogRef.afterClosed().subscribe((result) => {
+      console.log('Dialog de ver post foi fechado');
+    })
   }
 
   findUserById() {

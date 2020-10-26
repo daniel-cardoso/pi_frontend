@@ -46,6 +46,7 @@ import { NgxViacepModule } from '@brunoc/ngx-viacep';
 import { FeedUsuarioComponent } from './feed-usuario/feed-usuario.component';
 import {MatCardModule} from '@angular/material/card';
 import { NovoFeedComponent } from './views/novo-feed/novo-feed.component';
+import { DialogPostcompletoComponent } from './views/feed-page/dialog-listagem-feed/dialog-postcompleto/dialog-postcompleto.component';
 
 
 
@@ -79,7 +80,8 @@ import { NovoFeedComponent } from './views/novo-feed/novo-feed.component';
     MenuLateralComponent,
     DropdComponent,
     FeedUsuarioComponent,
-    NovoFeedComponent
+    NovoFeedComponent,
+    DialogPostcompletoComponent
     
     
   ],

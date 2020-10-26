@@ -17,7 +17,6 @@ import { Tema } from 'src/app/model/Tema';
   styleUrls: ['./feed-page.component.css'],
 })
 export class FeedPageComponent implements OnInit {
-  
   usuario: Usuario = new Usuario();
   idUser: number;
   nomeUser: string;
@@ -33,7 +32,7 @@ export class FeedPageComponent implements OnInit {
   tema: Tema = new Tema();
   listaTemas: Tema[];
   idTema: number;
-  nomeTema:string;
+  nomeTema: string;
 
   constructor(
     public dialog: MatDialog,
@@ -51,15 +50,11 @@ export class FeedPageComponent implements OnInit {
 
     this.postagem.usuario = this.usuario;
     this.usuario.id = environment.idUsuario;
-
-    
-
+    this.manipularPost();
     this.findUserById();
     this.findAllPostagens();
     this.findAllTemas();
-    // this.findByIdListaPostagem();
 
-    console.log(this.listaPostagens);
   }
 
   abrirDialog(): void {
@@ -98,28 +93,46 @@ export class FeedPageComponent implements OnInit {
   }
 
   findByTituloPostagem() {
-    if (this.titulo === ''){
-      this.findAllPostagens()
+    if (this.titulo === '') {
+      this.findAllPostagens();
     } else {
-      this.postagemService.getByTituloPostagem(this.titulo).subscribe((resp: Postagem[]) => {
-        this.listaPostagens = resp
-      })
+      this.postagemService
+        .getByTituloPostagem(this.titulo)
+        .subscribe((resp: Postagem[]) => {
+          this.listaPostagens = resp;
+        });
     }
   }
 
   findByIdListaPostagem() {
-    this.postagemService.getByIdListaPostagem(this.idUser).subscribe((resp: Postagem[]) => {
-      this.listaPostagens = resp
-    })
+    this.postagemService
+      .getByIdListaPostagem(this.idUser)
+      .subscribe((resp: Postagem[]) => {
+        this.listaPostagens = resp;
+      });
   }
 
   findByNomeTema() {
-    if (this.nomeTema === ''){
-      this.findAllTemas()
+    if (this.nomeTema === '') {
+      this.findAllTemas();
     } else {
-      this.temaService.getByNomeTema(this.nomeTema).subscribe((resp: Tema[]) => {
-        this.listaTemas = resp
-      })
+      this.temaService
+        .getByNomeTema(this.nomeTema)
+        .subscribe((resp: Tema[]) => {
+          this.listaTemas = resp;
+        });
     }
+  }
+
+  manipularPost() {
+    let ok = false;
+    let nomeEnv = environment.nomeUsuario;
+    let nomePost = this.postagem.usuario.usuarioNome;
+    console.log(nomeEnv);
+    console.log(nomePost);
+    if (nomeEnv === nomePost) {
+      ok = true;
+    }
+    return ok;
   }
 }

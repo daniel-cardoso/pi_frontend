@@ -32,7 +32,7 @@ export class NavbarComponent implements OnInit {
     // this.nomeUser = environment.nomeUsuario;
     // this.fotoUrlUser = environment.fotoUrlUsuario;
     console.log(this.usuario);
-    this.findUserById();
+    // this.findUserById();
   }
 
   sair() {

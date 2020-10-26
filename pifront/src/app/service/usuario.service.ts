@@ -25,4 +25,5 @@ export class UsuarioService {
   getAllUsuarios(){
     return this.http.get(this.API, this.token)
   }
+
 }

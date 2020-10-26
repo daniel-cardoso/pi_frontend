@@ -1,7 +1,7 @@
+import { Postagem } from 'src/app/model/Postagem';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment.prod';
-import { Postagem } from '../model/Postagem';
 
 @Injectable({
   providedIn: 'root'
@@ -42,5 +42,10 @@ export class PostagemService {
   getByTituloPostagem(titulo: string) {
     return this.http.get(this.API + `/titulo/${titulo}`, this.token)
   }
+
+
+
+  
+
 
 }

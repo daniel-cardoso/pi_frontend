@@ -7,6 +7,7 @@ import { environment } from 'src/environments/environment.prod';
 })
 export class UsuarioService {
   private readonly API = 'http://localhost:8080/usuario'
+  
   constructor(private http: HttpClient) { }
 
   token = {
@@ -21,7 +22,8 @@ export class UsuarioService {
     return this.http.get(this.API + `/${id}`, this.token)
   }
 
-  getAllUsuario(){
+  getAllUsuarios(){
     return this.http.get(this.API, this.token)
   }
+
 }

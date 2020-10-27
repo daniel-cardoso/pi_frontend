@@ -1,6 +1,5 @@
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
-    integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 
 <section>
     <div class="fundo-do-feed cinza1">
@@ -12,27 +11,10 @@
                 <div class="col-lg-12">
 
                     <div class="container row 2-camada">
-                        <!-- painel lateral esquerdo -->
-                        <div class="painel-lateral cinza2 container col-md-2">
-                            <!-- conteúdo painel lateral esquerdo -->
-                            <div>
-                                <h4 style="margin: 5px;">
-                                    Barra Lateral
-                        
-                                </h4>
-                            </div>
-                        
-                            <hr>
-                        <!-- dropdown de temas -->
-                        <app-dropd></app-dropd>
-                        <!-- dropdown de temas -->
-                            
-                        </div>
-                        
-                        <!-- fim painel lateral esquerdo -->
+
 
                         <!-- painel central -->
-                        <div class="coluna-central container-fluid col-lg-9 fundo-central">
+                        <div class="coluna-central container-fluid col-lg- fundo-central">
                             <!-- conteúdo painel central -->
 
                             <!-- abertura div caixa de postagem -->
@@ -42,11 +24,10 @@
                                 <div class=" container row w-100 justify-content-center" style="margin:15px;">
                                     <div class="col-md-4">
                                         <div class="row justify-content-center">
-                                            <img class="avatar" src="https://i.imgur.com/OShlP7J.png"
-                                                alt="foto de perfil">
+                                            <img class="avatar" src="{{ fotoUrlUser }}" style="margin-top: 20px;" alt="foto de perfil">
                                         </div>
                                         <div class="row justify-content-center">
-                                            <a style="text-decoration: none;" href="">Maria do Bairro</a>
+                                            <a style="text-decoration: none;" routerLink="/meusdados">{{ nomeUser }}</a>
                                         </div>
                                     </div>
                                     <div class="container col-lg-8">
@@ -58,124 +39,105 @@
                                     </div>
                                 </div>
 
-                                <!-- row dos botoes (tirei essa parte) -->
-
                             </div>
                             <!-- fecha div caixa de postagem -->
 
 
                             <!-- abre div listagem feed -->
                             <div class="lista-feed container row cinza2">
-                                <div class="col-md-12">
-                                    <h1>ESPAÇO LISTAGEM FEED</h1>
-                                   
-                                    <p>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis facere, amet
-                                        quos
-                                        placeat tenetur pariatur libero aut nemo accusamus, laborum totam consectetur
-                                        quod
-                                        reprehenderit reiciendis ab nobis ipsam quasi consequuntur?
-                                    </p>
-                                    <p>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis facere, amet
-                                        quos
-                                        placeat tenetur pariatur libero aut nemo accusamus, laborum totam consectetur
-                                        quod
-                                        reprehenderit reiciendis ab nobis ipsam quasi consequuntur?
-                                    </p>
-                                    <p>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis facere, amet
-                                        quos
-                                        placeat tenetur pariatur libero aut nemo accusamus, laborum totam consectetur
-                                        quod
-                                        reprehenderit reiciendis ab nobis ipsam quasi consequuntur?
-                                    </p>
-                                    <p>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis facere, amet
-                                        quos
-                                        placeat tenetur pariatur libero aut nemo accusamus, laborum totam consectetur
-                                        quod
-                                        reprehenderit reiciendis ab nobis ipsam quasi consequuntur?
-                                    </p>
-                                    <p>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis facere, amet
-                                        quos
-                                        placeat tenetur pariatur libero aut nemo accusamus, laborum totam consectetur
-                                        quod
-                                        reprehenderit reiciendis ab nobis ipsam quasi consequuntur?
-                                    </p>
-                                    <p>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis facere, amet
-                                        quos
-                                        placeat tenetur pariatur libero aut nemo accusamus, laborum totam consectetur
-                                        quod
-                                        reprehenderit reiciendis ab nobis ipsam quasi consequuntur?
-                                    </p>
-                                    <p>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis facere, amet
-                                        quos
-                                        placeat tenetur pariatur libero aut nemo accusamus, laborum totam consectetur
-                                        quod
-                                        reprehenderit reiciendis ab nobis ipsam quasi consequuntur?
-                                    </p>
-                                    <p>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis facere, amet
-                                        quos
-                                        placeat tenetur pariatur libero aut nemo accusamus, laborum totam consectetur
-                                        quod
-                                        reprehenderit reiciendis ab nobis ipsam quasi consequuntur?
-                                    </p>
-                                    <p>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis facere, amet
-                                        quos
-                                        placeat tenetur pariatur libero aut nemo accusamus, laborum totam consectetur
-                                        quod
-                                        reprehenderit reiciendis ab nobis ipsam quasi consequuntur?
-                                    </p>
-                                    <p>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis facere, amet
-                                        quos
-                                        placeat tenetur pariatur libero aut nemo accusamus, laborum totam consectetur
-                                        quod
-                                        reprehenderit reiciendis ab nobis ipsam quasi consequuntur?
-                                    </p>
-                                    <p>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis facere, amet
-                                        quos
-                                        placeat tenetur pariatur libero aut nemo accusamus, laborum totam consectetur
-                                        quod
-                                        reprehenderit reiciendis ab nobis ipsam quasi consequuntur?
-                                    </p>
-                                    <p>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis facere, amet
-                                        quos
-                                        placeat tenetur pariatur libero aut nemo accusamus, laborum totam consectetur
-                                        quod
-                                        reprehenderit reiciendis ab nobis ipsam quasi consequuntur?
-                                    </p>
-                                    <p>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis facere, amet
-                                        quos
-                                        placeat tenetur pariatur libero aut nemo accusamus, laborum totam consectetur
-                                        quod
-                                        reprehenderit reiciendis ab nobis ipsam quasi consequuntur?
-                                    </p>
-                                    <p>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis facere, amet
-                                        quos
-                                        placeat tenetur pariatur libero aut nemo accusamus, laborum totam consectetur
-                                        quod
-                                        reprehenderit reiciendis ab nobis ipsam quasi consequuntur?
-                                    </p>
-                                    <p>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis facere, amet
-                                        quos
-                                        placeat tenetur pariatur libero aut nemo accusamus, laborum totam consectetur
-                                        quod
-                                        reprehenderit reiciendis ab nobis ipsam quasi consequuntur?
-                                    </p>
+
+                                <!-- COLUNA LISTAGEM FEED -->
+                                <div class="container cinza2">
+
+                                    <div id="listacards" class="card cinza3 mt-5 mb-5" *ngFor='let item of listaPostagens | orderBy : key : reverse'>
+                                        <div class="card-header">
+                                            <div class="row d-flex align-items-center ">
+                                                <div class="col-md-1  ">
+                                                    <img class="avatar  align-content-center" [src]="item.usuario.usuarioImagemUrl" alt="foto de perfil">
+                                                </div>
+                                                <div class="col-md-5 ">
+                                                    <span>
+                                                        <a routerLink="/meusdados">
+                                                            {{ item.usuario.usuarioNome }}
+                                                        </a>
+                                                    </span>
+                                                    <h4 class="card-title text-info"> {{item.postTitulo}} </h4>
+                                                    <small class="text-info">Tema: {{item.tema.temaDescricao}} </small>
+
+
+                                                </div>
+
+                                                <div *ngIf="nomeUser == item.usuario.usuarioNome" class="col-md-6 d-flex justify-content-end">
+                                                    <button class="mr-3 btn btn-outline-info" [routerLink]="['/editar-post', item.id]">
+                                                        <fa-icon class="fas fa-edit"></fa-icon>
+                                                    </button>
+                                                    <button class="btn btn-outline-danger ml-3" [routerLink]="['/delete-post', item.id]">
+                                                        <fa-icon class='fas fa-trash-alt'></fa-icon>
+                                                    </button>
+                                                </div>
+
+
+
+                                            </div>
+                                        </div>
+                                        <div class="card-body textos">
+                                            <mat-tab-group>
+                                                <mat-tab label="Postagem">
+                                                    <p>{{item.postTexto}}</p>
+                                                </mat-tab>
+
+                                                <mat-tab label="Endereços">
+                                                    <mat-label>Endereço: </mat-label>
+                                                    {{ item.postEndereco }} <br>
+
+                                                    <mat-label>Estado: </mat-label>
+                                                    {{ item.postEstado }} <br>
+
+                                                    <mat-label>Cidade: </mat-label>
+                                                    {{ item.postCidade }}
+                                                </mat-tab>
+
+                                                <mat-tab label="Foto/Imagem">
+
+                                                    <mat-accordion>
+                                                        <mat-expansion-panel hideToggle>
+                                                            <mat-expansion-panel-header>
+                                                                <mat-panel-title>
+                                                                    Imagem
+                                                                </mat-panel-title>
+                                                                <mat-panel-description>
+                                                                    <!-- link -->
+                                                                </mat-panel-description>
+                                                            </mat-expansion-panel-header>
+                                                            <img [src]="item.postImagem" alt="foto da causa">
+                                                        </mat-expansion-panel>
+                                                    </mat-accordion>
+
+                                                </mat-tab>
+
+                                                <mat-tab label="Demais Informações">
+                                                    <mat-label>Link: </mat-label>
+                                                    <a [href]="item.postUrl" target="_blank">Clique para abrir em nova
+                                                        guia</a>
+                                                </mat-tab>
+
+
+                                            </mat-tab-group>
+
+                                            <!-- <a class="justify-content-center" (click)='verPostCompleto()'>Ver o Post
+                                                completo</a> -->
+                                            <small id="texto" class="form-text m-0 text-muted text-info mb-3">
+                                                Postado em {{item.data | date: 'dd/MM/yyyy'}} às
+                                                {{item.data | date:'HH:mm'}}</small>
+                                        </div>
+                                    </div>
 
                                 </div>
+
+
+
+
+                                <!-- FECHA COL LISTAGEM FEED -->
 
                             </div>
                             <!-- fecha div postagem feed -->
@@ -184,19 +146,20 @@
 
                         <!-- painel lateral direito 
                         OBS: PARA CONSEGUIR USAR ESSE PAINEL É PRECISO
-                    DIMINUIR O TAMANHO DA COL DO PAINEL CENTRAL-->
+                        DIMINUIR O TAMANHO DA COL DO PAINEL CENTRAL-->
                         <!-- <div class="col-md-2 fundo-lateral-direito border border-danger bg-warning" style="margin:15px;">
                         </div> -->
 
                         <!-- fim painel lateral direito -->
 
-                        <div>
+                        <!-- <div>
                             <app-float-btn></app-float-btn>
-                        </div>
+                        </div> -->
 
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
 </section>

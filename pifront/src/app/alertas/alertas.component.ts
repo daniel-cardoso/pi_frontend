@@ -13,7 +13,7 @@ export class AlertasComponent implements OnInit {
 
   constructor(public modal: BsModalRef) {}
 
-  ngOnInit(): void {}
+  ngOnInit() {}
 
   onClose() {
     this.modal.hide();

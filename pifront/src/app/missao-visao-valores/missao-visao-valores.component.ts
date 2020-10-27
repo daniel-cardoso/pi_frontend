@@ -9,7 +9,7 @@ export class MissaoVisaoValoresComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
 
 }

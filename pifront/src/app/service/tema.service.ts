@@ -7,6 +7,7 @@ import { Tema } from '../model/Tema';
   providedIn: 'root'
 })
 export class TemaService {
+  private readonly API = 'http://localhost:8080/tema'
 
   constructor(private http: HttpClient) { }
 
@@ -15,27 +16,27 @@ export class TemaService {
   }
 
   getAllTemas() {
-    return this.http.get('http://localhost:8080/tema', this.token)
+    return this.http.get(this.API, this.token)
   }
 
   getByIdTema(id: number) {
-    return this.http.get(`http://localhost:8080/tema/${id}`, this.token)
+    return this.http.get(this.API + `/${id}`, this.token)
   }
 
   postTema(tema: Tema) {
-    return this.http.post('http://localhost:8080/tema', tema, this.token)
+    return this.http.post(this.API, tema, this.token)
   }
 
   putTema(tema: Tema) {
-    return this.http.put('http://localhost:8080/tema', tema, this.token)
+    return this.http.put(this.API, tema, this.token)
   }
 
   deleteTema(id: number) {
-    return this.http.delete(`http://localhost:8080/tema/${id}`, this.token)
+    return this.http.delete(this.API + `/${id}`, this.token)
   }
 
   getByNomeTema(nome: string) {
-    return this.http.get(`http://localhost:8080/tema/nome/${nome}`, this.token)
+    return this.http.get(this.API + `/nome/${nome}`, this.token)
   }
 
 

@@ -8,6 +8,7 @@ export class Postagem {
     public postCidade:string 
     public postEstado:string 
     public postEndereco:string
+    public postBairro:string
     public postTag:string
     public postUrl:string
     public postImagem:string

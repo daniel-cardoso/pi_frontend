@@ -50,7 +50,7 @@ export class PutPostagemComponent implements OnInit {
 
     this.postagemService.putPostagem(this.postagem).subscribe((resp: Postagem) => {
       this.postagem = resp
-      this.router.navigate(['/feed'])
+      this.router.navigate(['/feed-page'])
       this.alert.showAlertSuccess('Postagem alterada com sucesso')
     }, err => {
       if (err.status == '500'){

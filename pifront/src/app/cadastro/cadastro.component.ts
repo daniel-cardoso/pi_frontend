@@ -30,7 +30,7 @@ export class CadastroComponent implements OnInit {
   faAddressCard = faAddressCard
   faCalendarAlt = faCalendarAlt
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
 
   conferirSenha(event: any) {

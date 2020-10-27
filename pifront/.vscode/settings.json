@@ -5,7 +5,19 @@
             "base": "develop"
         },
         {
-            "name": "feature/semana12",
+            "name": "feature/merge_forks",
+            "base": "develop"
+        },
+        {
+            "name": "feature/merge",
+            "base": "develop"
+        },
+        {
+            "name": "feature/feedworking",
+            "base": "develop"
+        },
+        {
+            "name": "feature/merge-forks2",
             "base": "develop"
         }
     ]

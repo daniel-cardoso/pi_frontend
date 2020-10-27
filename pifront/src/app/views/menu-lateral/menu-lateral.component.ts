@@ -9,7 +9,7 @@ export class MenuLateralComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
 
 }

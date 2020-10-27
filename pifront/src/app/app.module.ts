@@ -1,3 +1,4 @@
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {HttpClient, HttpClientModule} from '@angular/common/http'
@@ -26,7 +27,6 @@ import { PutTemaComponent } from './put-tema/put-tema.component';
 import { DeleteTemaComponent } from './delete-tema/delete-tema.component';
 import { CasaComponent } from './casa/casa.component';
 import { PerfilComponent } from './perfil/perfil.component';
-import { HomePageComponent } from './views/home-page/home-page.component';
 import { FeedPageComponent } from './views/feed-page/feed-page.component';
 import { FloatBtnComponent } from './componentes/float-btn/float-btn.component';
 import { DropdownTemasComponent } from './componentes/dropdown-temas/dropdown-temas.component';
@@ -42,6 +42,14 @@ import { PerfilLateralComponent } from './perfil-lateral/perfil-lateral.componen
 import { MeusDadosComponent } from './meus-dados/meus-dados.component';
 import { MenuLateralComponent } from './views/menu-lateral/menu-lateral.component';
 import { DropdComponent } from './views/menu-lateral/dropd/dropd.component';
+import { NgxViacepModule } from '@brunoc/ngx-viacep';
+import { FeedUsuarioComponent } from './feed-usuario/feed-usuario.component';
+import {MatCardModule} from '@angular/material/card';
+import { NovoFeedComponent } from './views/novo-feed/novo-feed.component';
+import { DialogPostcompletoComponent } from './views/feed-page/dialog-listagem-feed/dialog-postcompleto/dialog-postcompleto.component';
+import {MatTabsModule} from '@angular/material/tabs';
+import {MatExpansionModule} from '@angular/material/expansion';
+
 
 
 @NgModule({
@@ -63,7 +71,6 @@ import { DropdComponent } from './views/menu-lateral/dropd/dropd.component';
     DeleteTemaComponent,
     CasaComponent,
     PerfilComponent,
-    HomePageComponent,
     FeedPageComponent,
     FloatBtnComponent,
     DropdownTemasComponent,
@@ -74,6 +81,10 @@ import { DropdComponent } from './views/menu-lateral/dropd/dropd.component';
     MeusDadosComponent,
     MenuLateralComponent,
     DropdComponent,
+    FeedUsuarioComponent,
+    NovoFeedComponent,
+    DialogPostcompletoComponent
+    
     
   ],
   imports: [
@@ -91,6 +102,10 @@ import { DropdComponent } from './views/menu-lateral/dropd/dropd.component';
     MatNativeDateModule,
     ReactiveFormsModule,
     MatSelectModule,
+    NgxViacepModule,
+    MatCardModule,
+    MatTabsModule,
+    MatExpansionModule
 
   ],
   providers: [{

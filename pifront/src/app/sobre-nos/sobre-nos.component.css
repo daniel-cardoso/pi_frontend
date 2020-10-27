@@ -3,3 +3,7 @@ P.blocktext {
     margin-right: auto;
     width: 60em
 }
+
+.text-orange {
+    color: rgb(235, 156, 10);
+}

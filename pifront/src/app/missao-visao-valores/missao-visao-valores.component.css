@@ -1,5 +1,5 @@
 body {
-    width: 100vw;
+    width: 90vw;
     background-color: #1D1D1D;
     margin: 0;
 }
@@ -17,15 +17,15 @@ body {
 
 @media screen and (max-width: 767px) {
     .content {
-        /* padding-top: 100px; */
+        padding-top: 100px;
         flex-direction: column;
     }
 }
 
 .card {
-    width: 150%;
-    max-width: 500px;
-    min-width: 350px;
+    width: 50%;
+    max-width: 400px;
+    min-width: 250px;
     height: 250px;
     background-color: #292929;
     margin: 10px;
@@ -79,7 +79,7 @@ body {
     width: 100%;
     margin: 0;
     text-align: center;
-    margin-top: 30px;
+    margin-top: 20px;
     color: white;
     font-weight: 600;
     text-transform: uppercase;
@@ -101,7 +101,7 @@ body {
 }
 
 .card:hover {
-    height: 330px;
+    height: 440px;
 }
 
 .card:hover .info {
@@ -111,11 +111,11 @@ body {
 .card:hover .text {
     transition: all 0.3s ease;
     opacity: 1;
-    max-height: 40px;
+    max-height: 70px;
 }
 
 .card:hover .icon {
-    background-position: -120px;
+    background-position: -90px;
     transition: all 0.3s ease;
 }
 

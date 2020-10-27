@@ -1,3 +1,4 @@
+import { FeedPageComponent } from './../../feed-page.component';
 import { PostagemService } from 'src/app/service/postagem.service';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { Component, OnInit } from '@angular/core';
@@ -11,6 +12,7 @@ import { Postagem } from 'src/app/model/Postagem';
 export class DialogPostcompletoComponent implements OnInit {
   postagem: Postagem = new Postagem();
   idPost: number;
+
 
   constructor(
     private postagemService: PostagemService,

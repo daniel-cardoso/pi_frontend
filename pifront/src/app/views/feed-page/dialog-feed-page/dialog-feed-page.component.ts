@@ -91,6 +91,7 @@ export class DialogFeedPageComponent implements OnInit {
           this.postagem = new Postagem();
           alert('Postagem realizada com sucesso!');
           this.dialogRef.close();
+          console.log(this.postagem.id);
         });
     }
   }

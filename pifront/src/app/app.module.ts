@@ -47,6 +47,8 @@ import { FeedUsuarioComponent } from './feed-usuario/feed-usuario.component';
 import {MatCardModule} from '@angular/material/card';
 import { NovoFeedComponent } from './views/novo-feed/novo-feed.component';
 import { DialogPostcompletoComponent } from './views/feed-page/dialog-listagem-feed/dialog-postcompleto/dialog-postcompleto.component';
+import {MatTabsModule} from '@angular/material/tabs';
+import {MatExpansionModule} from '@angular/material/expansion';
 
 
 
@@ -101,7 +103,9 @@ import { DialogPostcompletoComponent } from './views/feed-page/dialog-listagem-f
     ReactiveFormsModule,
     MatSelectModule,
     NgxViacepModule,
-    MatCardModule
+    MatCardModule,
+    MatTabsModule,
+    MatExpansionModule
 
   ],
   providers: [{

@@ -28,6 +28,7 @@ export class FeedPageComponent implements OnInit {
 
   postagem: Postagem = new Postagem();
   listaPostagens: Postagem[];
+  idPost: number;
   titulo: string;
 
   tema: Tema = new Tema();
@@ -52,12 +53,13 @@ export class FeedPageComponent implements OnInit {
 
     this.postagem.usuario = this.usuario;
     this.usuario.id = environment.idUsuario;
+
     this.findUserById();
     this.findAllPostagens();
     this.findAllTemas();
   }
 
-  abrirDialog(): void {
+  abrirDialog() {
     const dialogRef = this.dialog.open(DialogFeedPageComponent, {
       minWidth: '450px',
     });
@@ -68,12 +70,13 @@ export class FeedPageComponent implements OnInit {
     });
   }
 
-  verPostCompleto(): void {
+  verPostCompleto() {
+    this.findPostagemById();
     const dialogRef = this.verPost.open(DialogPostcompletoComponent);
-
+    console.log(this.postagem.id);
     dialogRef.afterClosed().subscribe((result) => {
       console.log('Dialog de ver post foi fechado');
-    })
+    });
   }
 
   findUserById() {
@@ -97,6 +100,12 @@ export class FeedPageComponent implements OnInit {
   findAllPostagens() {
     this.postagemService.getAllPostagens().subscribe((resp: Postagem[]) => {
       this.listaPostagens = resp;
+    });
+  }
+
+  findPostagemById() {
+    this.postagemService.getByIdPostagem(this.idPost).subscribe((resp: any) => {
+      this.postagem = resp;
     });
   }
 
@@ -142,5 +151,9 @@ export class FeedPageComponent implements OnInit {
       ok = true;
     }
     return ok;
+  }
+
+  pegaProperty() {
+    let prop = Object.values
   }
 }

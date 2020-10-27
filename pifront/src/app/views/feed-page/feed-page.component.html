@@ -49,13 +49,13 @@
                                 <!-- COLUNA LISTAGEM FEED -->
                                 <div class="container cinza2">
 
-                                    <div class="card cinza3 mt-5 mb-5" *ngFor='let item of listaPostagens | orderBy : key : reverse'>
+                                    <div id="listacards" class="card cinza3 mt-5 mb-5" *ngFor='let item of listaPostagens | orderBy : key : reverse'>
                                         <div class="card-header">
-                                            <div class="row d-flex align-items-center border border-info">
-                                                <div class="col-md-1 border border-info ">
-                                                    <img class="avatar border border-info align-content-center" src="https://uploads.metropoles.com/wp-content/uploads/2020/09/27193307/Cristiano-Ronaldo-2.jpg" alt="foto de perfil">
+                                            <div class="row d-flex align-items-center ">
+                                                <div class="col-md-1  ">
+                                                    <img class="avatar  align-content-center" [src]="item.usuario.usuarioImagemUrl" alt="foto de perfil">
                                                 </div>
-                                                <div class="col-md-5 border border-info">
+                                                <div class="col-md-5 ">
                                                     <span>
                                                         <a routerLink="/meusdados">
                                                             {{ item.usuario.usuarioNome }}
@@ -64,9 +64,10 @@
                                                     <h4 class="card-title text-info"> {{item.postTitulo}} </h4>
                                                     <small class="text-info">Tema: {{item.tema.temaDescricao}} </small>
 
+
                                                 </div>
 
-                                                <div *ngIf="nomeUser == item.usuario.usuarioNome" class="col-md-6 d-flex border justify-content-end border-info">
+                                                <div *ngIf="nomeUser == item.usuario.usuarioNome" class="col-md-6 d-flex justify-content-end">
                                                     <button class="mr-3 btn btn-outline-info" [routerLink]="['/editar-post', item.id]">
                                                         <fa-icon class="fas fa-edit"></fa-icon>
                                                     </button>
@@ -79,10 +80,52 @@
 
                                             </div>
                                         </div>
-                                        <div class="card-body">
-                                            <p class="card-text text-info" aria-describedby="texto"> {{item.postTexto}}
-                                            </p>
-                                            <a class="justify-content-center" (click)='verPostCompleto()'>Ver o Post completo</a>
+                                        <div class="card-body textos">
+                                            <mat-tab-group>
+                                                <mat-tab label="Postagem">
+                                                    <p>{{item.postTexto}}</p>
+                                                </mat-tab>
+
+                                                <mat-tab label="Endereços">
+                                                    <mat-label>Endereço: </mat-label>
+                                                    {{ item.postEndereco }} <br>
+
+                                                    <mat-label>Estado: </mat-label>
+                                                    {{ item.postEstado }} <br>
+
+                                                    <mat-label>Cidade: </mat-label>
+                                                    {{ item.postCidade }}
+                                                </mat-tab>
+
+                                                <mat-tab label="Foto/Imagem">
+
+                                                    <mat-accordion>
+                                                        <mat-expansion-panel hideToggle>
+                                                            <mat-expansion-panel-header>
+                                                                <mat-panel-title>
+                                                                    Imagem
+                                                                </mat-panel-title>
+                                                                <mat-panel-description>
+                                                                    <!-- link -->
+                                                                </mat-panel-description>
+                                                            </mat-expansion-panel-header>
+                                                            <img [src]="item.postImagem" alt="foto da causa">
+                                                        </mat-expansion-panel>
+                                                    </mat-accordion>
+
+                                                </mat-tab>
+
+                                                <mat-tab label="Demais Informações">
+                                                    <mat-label>Link: </mat-label>
+                                                    <a [href]="item.postUrl" target="_blank">Clique para abrir em nova
+                                                        guia</a>
+                                                </mat-tab>
+
+
+                                            </mat-tab-group>
+
+                                            <!-- <a class="justify-content-center" (click)='verPostCompleto()'>Ver o Post
+                                                completo</a> -->
                                             <small id="texto" class="form-text m-0 text-muted text-info mb-3">
                                                 Postado em {{item.data | date: 'dd/MM/yyyy'}} às
                                                 {{item.data | date:'HH:mm'}}</small>
@@ -103,15 +146,15 @@
 
                         <!-- painel lateral direito 
                         OBS: PARA CONSEGUIR USAR ESSE PAINEL É PRECISO
-                    DIMINUIR O TAMANHO DA COL DO PAINEL CENTRAL-->
+                        DIMINUIR O TAMANHO DA COL DO PAINEL CENTRAL-->
                         <!-- <div class="col-md-2 fundo-lateral-direito border border-danger bg-warning" style="margin:15px;">
                         </div> -->
 
                         <!-- fim painel lateral direito -->
 
-                        <div>
+                        <!-- <div>
                             <app-float-btn></app-float-btn>
-                        </div>
+                        </div> -->
 
                     </div>
                 </div>

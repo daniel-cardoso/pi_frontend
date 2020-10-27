@@ -10,6 +10,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MeusDadosComponent implements OnInit {
   usuario: Usuario = new Usuario();
+  
   idUser: number = environment.idUsuario
   nome = environment.nomeUsuario;
   email = this.usuario.usuarioEmail;

@@ -13,10 +13,6 @@
             "base": "develop"
         },
         {
-            "name": "feature/feedworking",
-            "base": "develop"
-        },
-        {
             "name": "feature/merge-forks2",
             "base": "develop"
         }
